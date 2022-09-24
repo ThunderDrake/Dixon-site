@@ -1,0 +1,164 @@
+@import "../vars";
+
+.custom-input,
+.custom-textarea {
+  position: relative;
+  display: flex;
+
+  // width: 500px;
+  // padding: 20px 0;
+
+  label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input,
+    textarea {
+      flex-grow: 1;
+      outline: none;
+      border: 1px solid $color-very-light-grey;
+      border-radius: 15px;
+      padding: 13px 15px;
+      font-size: 18px;
+      line-height: 150%;
+      transition: border $trans-default;
+
+      &::placeholder {
+        color: $color-very-light-grey;
+      }
+
+      &:focus {
+        border: 1px solid rgba($color-default-black, 0.8);
+      }
+
+      &:hover {
+        border: 1px solid rgba($color-default-black, 0.5);
+      }
+
+      @media (max-width: 1022px) {
+        font-size: 12px;
+        line-height: 150%;
+      }
+    }
+
+    textarea {
+      border-bottom-right-radius: 0;
+      min-height: 100px;
+      resize: vertical;
+
+      @media (max-width: 1022px) {
+        border-bottom-right-radius: 15px;
+        min-height: 82px;
+        resize: none;
+      }
+
+      @media (max-width: 373px) {
+        min-height: 100px;
+      }
+    }
+  }
+
+  &__error {
+    position: absolute;
+    left: 0;
+    top: calc(100%);
+    width: 100%;
+    font-size: 12px;
+    line-height: 130%;
+    color: rgba($color-red, 0.7);
+    opacity: 0;
+    transition: opacity $trans-default;
+  }
+
+  &__counter {
+    position: absolute;
+    right: 9px;
+    bottom: 6px;
+    z-index: 20;
+    font-size: 14px;
+    line-height: 130%;
+    color: $color-grey;
+
+    @media (max-width: 1022px) {
+      right: 11px;
+      bottom: 5px;
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+
+  &.is-invalid {
+    input,
+    textarea {
+      border: 1px solid $color-red;
+
+      // border-bottom: 1px solid rgba($color-red, 0.5);
+
+      &:focus,
+      &:hover {
+        border: 1px solid rgba($color-red, 0.5);
+
+        // border-bottom: 1px solid rgba($color-red, 0.5);
+      }
+    }
+
+    .custom-input__error,
+    .custom-textarea__error {
+      opacity: 1;
+    }
+  }
+
+  /* &.is-valid {
+    input {
+      border: 2px solid $color-malachite;
+
+      &:focus,
+      &:hover {
+        border: 2px solid rgba($color-malachite, 0.5);
+      }
+    }
+  } */
+}
+
+.custom-textarea {
+  label {
+    position: relative;
+    z-index: 10;
+
+    svg {
+      position: absolute;
+      right: 1px;
+      bottom: 1px;
+      display: block;
+      width: 15px;
+      height: 15px;
+      color: $color-default-white;
+
+      @media (max-width: 1022px) {
+        display: none;
+      }
+    }
+  }
+
+  &--lg {
+    textarea {
+      height: 200px;
+
+      @media (max-width: 1022px) {
+        height: 136px;
+      }
+    }
+  }
+
+  &--sm-mobile {
+    label {
+      textarea {
+        @media (max-width: 1022px) {
+          height: 46px;
+          min-height: 46px;
+        }
+      }
+    }
+  }
+}

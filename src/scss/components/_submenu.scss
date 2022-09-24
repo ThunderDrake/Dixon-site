@@ -1,0 +1,225 @@
+@import "../vars";
+
+.submenu {
+  &.header__submenu-search {
+    top: 0;
+    border-top: none;
+    border-bottom: 1px solid rgba(130, 130, 130, 0.1);
+    border-radius: 0;
+    box-shadow: none;
+    z-index: 5;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+
+  position: absolute;
+  z-index: 5;
+  top: 50px;
+  left: 0;
+  background-color: $color-default-white;
+  width: auto;
+  box-shadow: none;
+  // box-shadow: 0px 36px 90px rgba(13, 8, 65, 0.08);
+  border-radius: 0 0 20px 20px;
+
+  transition: box-shadow $trans-default,
+  background-color $trans-default,
+  border-color $trans-default,
+  color $trans-default;
+
+  transition: opacity $trans-default;
+  transition-delay: 0s;
+  visibility: hidden;
+  opacity: 0;
+
+  &.is-show {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @include vp-1023 {
+    position: relative;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    opacity: 1;
+
+    padding-left: 37px;
+
+    border: none;
+    box-shadow: none;
+
+    &:before,
+    &:after {
+      content: none;
+    }
+  }
+
+  .container {
+    padding: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include vp-1023 {
+      padding: 0;
+      padding-top: 11px;
+      margin-bottom: 29px;
+    }
+  }
+}
+
+.submenu__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @include vp-1023 {
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 142%;
+  }
+
+  .submenu__item {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.submenu__link {
+  display: flex;
+  align-items: center;
+  color: $color-default-black;
+
+  &.is-active {
+    width: min-content;
+    min-width: fit-content;
+    position: relative;
+    color: $color-navy-blue;
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      margin-top: -3px;
+      right: -10px;
+
+      width: 7px;
+      height: 7px;
+      background-color: $color-navy-blue;
+      border-radius: 50%;
+
+      transition: opacity $trans-default, background-color $trans-default;
+    }
+  }
+
+  // @media (hover: hover), screen and (min-width: 0\0) {
+  //   &:hover,
+  //   &:focus {
+  //     &::after {
+  //       position: absolute;
+  //       content: "";
+  //       top: 50%;
+  //       margin-top: -3px;
+  //       right: -14px;
+
+  //       width: 7px;
+  //       height: 7px;
+  //       background-color: $color-navy-blue;
+  //       border-radius: 50%;
+
+  //       transition: opacity $trans-default, background-color $trans-default;
+  //     }
+  //   }
+  // }
+
+  @include vp-1023 {
+    width: 100%;
+    justify-content: flex-start;
+    color: $color-grey;
+
+    &.is-active {
+      width: auto;
+      color: $color-nero;
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+}
+
+.submenu__search-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.submenu__search-close {
+  align-items: center;
+  min-width: 37px;
+  max-width: 37px;
+  height: 37px;
+}
+
+.header__submenu-search {
+  .container {
+    padding: 0 20px;
+  }
+
+  @include vp-1023 {
+    padding: 0 10px;
+  }
+}
+
+.submenu__overlay {
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  /* stylelint-disable-next-line */
+  min-height: calc(100 * var(--vh, 1vh));
+  max-height: 100vh;
+  /* stylelint-disable-next-line */
+  max-height: calc(100 * var(--vh, 1vh));
+
+  cursor: pointer;
+}
+
+.submenu__container {
+  width: 100%;
+  background-color: $color-default-white;
+}
+
+.submenu-search .custom-input {
+  position: relative;
+}
+
+.submenu-search__button {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.submenu-search .custom-input label input {
+  border-radius: 10px;
+  padding-left: 40px;
+  font-size: 12px;
+  color: #a4a4a4;
+  background: #f2f2f2;
+}

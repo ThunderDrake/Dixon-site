@@ -1,0 +1,33 @@
+.phone-number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-family: var(--font-family-second), sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: normal;
+    text-decoration: none;
+    color: $color-dark-state-blue;
+  }
+
+  &__icon {
+    margin-right: 4px;
+  }
+
+  &__text {
+    margin-top: 5px;
+    margin-right: 0;
+    margin-left: auto;
+    font-size: 10px;
+    line-height: 150%;
+    color: $color-storm-grey;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+}

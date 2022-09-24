@@ -67,26 +67,30 @@ const svgSprites = () => {
         },
       })
     )
-    .pipe(
-      cheerio({
-        run: function ($) {
-          $('[fill]').removeAttr('fill');
-          $('[stroke]').removeAttr('stroke');
-          $('[style]').removeAttr('style');
-        },
-        parserOptions: {
-          xmlMode: true
-        },
-      })
-    )
-    .pipe(replace('&gt;', '>'))
+    // .pipe(
+    //   cheerio({
+    //     run: function ($) {
+    //       $('[fill]').removeAttr('fill');
+    //       $('[stroke]').removeAttr('stroke');
+    //       $('[style]').removeAttr('style');
+    //     },
+    //     parserOptions: {
+    //       xmlMode: true
+    //     },
+    //   })
+    // )
+    // .pipe(replace('&gt;', '>'))
     .pipe(svgSprite({
       mode: {
         stack: {
           sprite: "../sprite.svg"
+        },
+        symbol: {
+          inline: true
         }
       },
     }))
+    .pipe(dest(paths.srcImgFolder))
     .pipe(dest(paths.buildImgFolder));
 }
 

@@ -1,3 +1,145 @@
 <header class="header">
-  <div class="container"></div>
+  <div class="container header__container">
+
+    <a class="logo header__logo" href="/">
+      <picture>
+        <source srcset="img/logo.avif" type="image/avif">
+        <source srcset="img/logo.webp" type="image/webp">
+        <img loading="lazy" src="img/logo.png" class="image" width="230" height="63"
+          alt="Dixon — магазин мобильных телефонов">
+      </picture>
+    </a>
+
+    <div class="header__navigation-block">
+
+      <div class="header__search-block submenu-search">
+        <form method="get" action="#">
+          <div class="submenu-search__form-wrap">
+            <div class="custom-input">
+              <label>
+                <button class="submenu-search__button btn-reset">
+                  <svg class="submenu-search__icon" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#search"></use>
+                  </svg>
+                </button>
+                <input type="search" id="submenu-search" name="s" placeholder="Поиск">
+              </label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class="header__adress-block adress">
+        <svg class="adress__icon" width="16" height="21">
+          <use xlink:href="img/sprite.svg#adress"></use>
+        </svg>
+        <div class="adress__text">Чебоксары, ул. Калинина, 91 к1</div>
+      </div>
+
+      <div class="header__nav main-nav">
+        <nav class="main-nav__menu accordion navigation" data-accordion="parent">
+          <ul class="navigation__list list-reset">
+
+            <li class="navigation__item" data-no-submenu>
+              <a class="link navigation__link link--inline navigation__link--active" href="/">Главная</a>
+            </li>
+
+            <li class="navigation__item" data-has-submenu data-accordion="element">
+              <div class="accordion__button" data-accordion="button" tabindex="0">
+                <a class="link navigation__link" href="/shop/">Магазин</a>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="submenu shop-submenu" data-submenu>
+                  <div class="container">
+                    <div class="school-submenu__wrap">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <a class="submenu__link" href="/shop-1/">Магазин 1</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation__item" data-has-submenu data-accordion="element">
+              <div class="accordion__button" data-accordion="button" tabindex="0">
+                <a class="link navigation__link" href="/service/">Ремонт и сервис</a>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="submenu shop-submenu" data-submenu>
+                  <div class="container">
+                    <div class="school-submenu__wrap">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <a class="submenu__link" href="/service-1/">Ремонт и сервис 1</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation__item" data-has-submenu data-accordion="element">
+              <div class="accordion__button" data-accordion="button" tabindex="0">
+                <a class="link navigation__link" href="/about/">О компании</a>
+              </div>
+              <div class="accordion__content" data-accordion="content">
+                <div class="submenu shop-submenu" data-submenu>
+                  <div class="container">
+                    <div class="school-submenu__wrap">
+                      <ul class="submenu__list">
+                        <li class="submenu__item">
+                          <a class="submenu__link" href="/about-1/">О компании 1</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="navigation__item" data-no-submenu>
+              <a class="link navigation__link link--inline" href="/">Вакансии</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="header__contacts">
+
+      <div class="header__contacts-phone phone-number">
+        <a class="phone-number__link" href="tel:+78352600010">
+          <svg class="phone-number__icon" width="18" height="18">
+            <use xlink:href="#phone"></use>
+          </svg>
+          +7 (8352) 60-00-10
+        </a>
+        <span class="phone-number__text">Менеджер по продажам</span>
+      </div>
+
+      <div class="header__contacts-phone phone-number">
+        <a class="phone-number__link" href="tel:+78352364202">
+          <svg class="phone-number__icon" width="18" height="18">
+            <use xlink:href="#phone"></use>
+          </svg>
+          +7 (8352) 36-42-02
+        </a>
+        <span class="phone-number__text">Ремонт и сервис</span>
+      </div>
+
+    </div>
+
+    <div class="header__cart">
+      <a class="header__cart-link" href="#">
+        <svg class="header__cart-icon" width="24" height="24">
+          <use xlink:href="#cart"></use>
+        </svg>
+        <div class="header__cart-count">1</div>
+      </a>
+    </div>
+  </div>
 </header>
