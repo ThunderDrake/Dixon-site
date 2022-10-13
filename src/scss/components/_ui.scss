@@ -18,6 +18,15 @@
   font-weight: 500;
 }
 
+.h2-title {
+  margin: 0;
+  margin-bottom: 1em;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 140%;
+  color: $color-dark-state-blue;
+}
+
 .btn {
   position: relative;
   display: inline-block;
