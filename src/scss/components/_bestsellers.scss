@@ -4,4 +4,18 @@
   &__title {
     text-align: center;
   }
+
+  &__products {
+    margin-bottom: 5rem;
+  }
+
+  &__link {
+    padding: 1.5em 2.5em;
+
+    &-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }

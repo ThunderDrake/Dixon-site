@@ -1,4 +1,8 @@
 .products {
+  &__tabs {
+    @include tabs;
+  }
+
   &__tabs-nav {
     display: flex;
     margin-bottom: 2.5em;
@@ -13,6 +17,7 @@
 
     &-btn {
       border: none;
+      border-bottom: 2px solid transparent;
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;

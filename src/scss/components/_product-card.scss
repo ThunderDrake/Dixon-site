@@ -1,4 +1,5 @@
 .product-card {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin-right: 20px;
@@ -9,6 +10,35 @@
   box-shadow: 0 0 15px rgb(196 196 196 / 25%);
   font-size: 14px;
   background: #fff;
+
+  &__label {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-top: 15px;
+    width: 45px;
+    height: 80px;
+    font-size: 10px;
+    line-height: 12px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: $color-default-white;
+    background-color: $color-dark-state-blue;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      border-right: 22px solid transparent;
+      border-bottom: 30px solid $color-default-white;
+      border-left: 22px solid transparent;
+      width: 0;
+      height: 0;
+    }
+  }
 
   &__add {
     display: flex;

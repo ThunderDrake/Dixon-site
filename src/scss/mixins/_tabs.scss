@@ -1,6 +1,7 @@
 @mixin tabs {
   .tabs__nav-btn--active {
-    background-color: #ff0001;
+    border-bottom: 2px solid currentcolor;
+    font-weight: 700;
   }
 
   .tabs__panel {
