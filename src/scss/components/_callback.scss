@@ -1,0 +1,22 @@
+.callback {
+  padding-top: 11em;
+  padding-bottom: 7em;
+  background-image: url("../img/form-section-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__container {
+    position: relative;
+  }
+
+  &__form {
+    width: 52%;
+  }
+
+  &__human-image {
+    position: absolute;
+    right: -270px;
+    bottom: -7em;
+    pointer-events: none;
+  }
+}
