@@ -67,5 +67,13 @@
       box-shadow: inset 0 -19.218px 32.0301px #5158be, inset 0 23.4887px 32.0301px rgb(255 255 255 / 35%);
       background-color: #3743f9;
     }
+
+    @include bp-425 {
+      font-size: 16px;
+    }
+
+    @include bp-375 {
+      font-size: 14px;
+    }
   }
 }

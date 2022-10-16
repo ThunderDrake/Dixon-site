@@ -20,4 +20,8 @@
       max-width: 1920px;
     }
   }
+
+  @include bp-415 {
+    height: 90vh;
+  }
 }

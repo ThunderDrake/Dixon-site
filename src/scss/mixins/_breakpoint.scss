@@ -74,8 +74,20 @@
   }
 }
 
+@mixin bp-1440 {
+  @media (max-width: 1441px) {
+    @content;
+  }
+}
+
 @mixin bp-1024 {
   @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin bp-700 {
+  @media (max-width: 701px) {
     @content;
   }
 }
@@ -88,6 +100,12 @@
 
 @mixin bp-500 {
   @media (max-width: 501px) {
+    @content;
+  }
+}
+
+@mixin bp-425 {
+  @media (max-width: 426px) {
     @content;
   }
 }
