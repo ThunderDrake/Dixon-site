@@ -6,8 +6,22 @@
 
   &__container {
     display: grid;
-    column-gap: 2em;
     grid-template-columns: repeat(12, 1fr);
+    gap: 2em;
+
+    @include bp-500 {
+      grid-template-columns: none;
+    }
+  }
+
+  @include bp-700 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  @include bp-500 {
+    padding-top: 4em;
+    padding-bottom: 4em;
   }
 }
 
@@ -78,5 +92,13 @@
     width: 100%;
     height: 100%;
     background-color: $color-ghost-gray;
+  }
+
+  @include bp-1024 {
+    grid-column: span 6;
+  }
+
+  @include bp-500 {
+    grid-column: auto;
   }
 }
