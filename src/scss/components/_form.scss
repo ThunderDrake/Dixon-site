@@ -15,6 +15,10 @@
     letter-spacing: 0.01em;
     text-align: center;
     color: $color-dark-state-blue;
+
+    @include bp-600 {
+      font-size: 2em;
+    }
   }
 
   &__subtitle {
@@ -24,6 +28,10 @@
     letter-spacing: 0.01em;
     text-align: center;
     color: $color-grey-asparagus;
+
+    @include bp-600 {
+      font-size: 1.2em;
+    }
   }
 
   &__field {
@@ -44,6 +52,10 @@
     &--tel {
       .form__input {
         margin-bottom: 45px;
+
+        @include bp-600 {
+          margin-bottom: 30px;
+        }
       }
     }
   }
@@ -58,6 +70,14 @@
     height: 5em;
     box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
     font-size: 1.2em;
+
+    @include bp-600 {
+      height: 4em;
+    }
+
+    @include bp-425 {
+      padding-left: 3.5em;
+    }
   }
 
   &__button {
@@ -65,6 +85,11 @@
     padding-top: 1.75em;
     padding-bottom: 1.6em;
     width: 100%;
+
+    @include bp-600 {
+      padding-top: 1.2em;
+      padding-bottom: 1em;
+    }
   }
 
   &__policy {
@@ -74,6 +99,18 @@
     a {
       color: $color-navy-blue;
     }
+  }
+
+  @include bp-700 {
+    padding: 3em 4em 2em;
+  }
+
+  @include bp-600 {
+    padding: 2em 3em 1em;
+  }
+
+  @include bp-425 {
+    padding: 1.2em 1.2em 1em;
   }
 }
 
