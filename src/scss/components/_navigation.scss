@@ -1,6 +1,12 @@
 .navigation {
   margin-top: 10px;
 
+  &__item {
+    @include bp-1024 {
+      margin-bottom: 10px;
+    }
+  }
+
   &__list {
     display: flex;
     align-items: center;

@@ -1,0 +1,13 @@
+.burger {
+  @include burger;
+  @include bp-1024 {
+    display: block;
+  }
+
+  --burger-width: 28px;
+  --burger-height: 24px;
+  --burger-line-height: 4px;
+
+  display: none;
+  color: $color-dark-state-blue;
+}

@@ -1,5 +1,5 @@
 const initSubmenu = () => {
-  const breakpoint = window.matchMedia('(min-width: 1024px)');
+  const breakpoint = window.matchMedia('(min-width: 1025px)');
   const submenuList = document.querySelectorAll('[data-submenu]');
   const menuItemsWithSubmenus = document.querySelectorAll('[data-has-submenu]');
   const menuItemsWithoutSubmenus = document.querySelectorAll('[data-no-submenu]');
@@ -72,7 +72,7 @@ const initSubmenu = () => {
   }
 
   window.addEventListener('resize', (evt) => {
-    if (evt.currentTarget.innerWidth < 1024) {
+    if (evt.currentTarget.innerWidth < 1025) {
       submenuList.forEach((item) => {
         item.style.top = 0;
       });
