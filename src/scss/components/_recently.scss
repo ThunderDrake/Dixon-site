@@ -4,5 +4,19 @@
 
   &__title {
     text-align: center;
+
+    @include bp-800 {
+      text-align: left;
+    }
+  }
+
+  @include bp-800 {
+    padding-top: 5em;
+    padding-bottom: 5em;
+  }
+
+  @include bp-425 {
+    padding-top: 3.5em;
+    padding-bottom: 3.5em;
   }
 }
