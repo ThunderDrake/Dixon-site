@@ -9,10 +9,33 @@
   &__container {
     display: flex;
     align-items: flex-start;
+
+    @include bp-1200 {
+      display: grid;
+    }
   }
 
   &__nav {
     display: flex;
+
+    @include bp-1200 {
+      grid-column: span 2;
+      grid-row: 2;
+    }
+
+    @include bp-800 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 2.5fr;
+    }
+
+    @include bp-600 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @include bp-425 {
+      grid-template-columns: none;
+    }
   }
 
   &__col {
@@ -32,11 +55,19 @@
       flex-flow: column wrap;
       width: 100%;
       max-height: 130px;
+
+      @include bp-425 {
+        max-height: none;
+      }
     }
 
     &-item {
       &:not(:last-child) {
         margin-bottom: 8px;
+      }
+
+      &--add {
+        color: #cfcfcf;
       }
     }
 
@@ -56,6 +87,21 @@
     &--third {
       margin-right: 0;
       margin-left: 30px;
+
+      @include bp-600 {
+        grid-column: span 3;
+        grid-row: 2;
+      }
+    }
+
+    @include bp-800 {
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    @include bp-425 {
+      grid-column: auto;
+      grid-row: auto;
     }
   }
 
@@ -82,5 +128,18 @@
         stroke: currentcolor;
       }
     }
+
+    @include bp-1200 {
+      grid-column: 2;
+      grid-row: 1;
+    }
+
+    @include bp-425 {
+      padding-top: 0;
+    }
   }
+}
+
+.footer__col-list li.footer__col-item--add:not(:last-child) {
+  margin-top: 2em;
 }

@@ -80,6 +80,12 @@
   }
 }
 
+@mixin bp-1200 {
+  @media (max-width: 1201px) {
+    @content;
+  }
+}
+
 @mixin bp-1024 {
   @media (max-width: 1024px) {
     @content;
