@@ -8,6 +8,10 @@
 
   &__products {
     margin-bottom: 5rem;
+
+    @include bp-800 {
+      margin-bottom: 3rem;
+    }
   }
 
   &__link {
@@ -18,5 +22,9 @@
       align-items: center;
       justify-content: center;
     }
+  }
+
+  @include bp-800 {
+    padding-bottom: 4rem;
   }
 }

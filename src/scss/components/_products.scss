@@ -13,6 +13,10 @@
       &:last-child {
         margin-right: 0;
       }
+
+      @include bp-800 {
+        flex: 1 0 auto;
+      }
     }
 
     &-btn {
@@ -40,6 +44,10 @@
         font-weight: 700;
         color: #ff512a;
       }
+    }
+
+    @include bp-800 {
+      overflow-x: scroll;
     }
   }
 }

@@ -1,5 +1,9 @@
 html {
   box-sizing: border-box;
+
+  @include bp-700 {
+    font-size: 14px;
+  }
 }
 
 *,
