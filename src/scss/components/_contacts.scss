@@ -49,10 +49,32 @@
       display: inline-block;
       margin-right: 17px;
     }
+
+    &-icon {
+      color: #3a4097;
+    }
+
+    &--footer {
+      justify-content: flex-end;
+
+      .contacts__socials-icon {
+        width: 20px;
+        height: 20px;
+        color: $color-default-white;
+      }
+    }
   }
 
   &__map {
     margin-right: 0;
     margin-left: auto;
   }
+}
+
+.contacts__socials--footer .contacts__socials-link {
+  margin-right: 12px;
+}
+
+.contacts__socials--footer .contacts__socials-link:last-child {
+  margin-right: 0;
 }

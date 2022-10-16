@@ -1,0 +1,86 @@
+.footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  line-height: 115%;
+  letter-spacing: 0.01em;
+  color: $color-default-white;
+  background-color: #393186;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__col {
+    padding-top: 25px;
+
+    &-title {
+      margin-bottom: 1em;
+      font-size: 20px;
+      line-height: 150%;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      color: #aaa;
+    }
+
+    &-list {
+      display: inline-flex;
+      flex-flow: column wrap;
+      width: 100%;
+      max-height: 130px;
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
+    }
+
+    &-link {
+      color: inherit;
+    }
+
+    &--first {
+      margin-left: 25px;
+    }
+
+    &--second {
+      margin-right: 0;
+      margin-left: 70px;
+    }
+
+    &--third {
+      margin-right: 0;
+      margin-left: 30px;
+    }
+  }
+
+  &__contacts {
+    margin-right: 0;
+    margin-left: auto;
+    padding-top: 25px;
+
+    &-phone {
+      flex-flow: column nowrap;
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      .phone-number__text {
+        margin-left: 0;
+        color: inherit;
+      }
+
+      .phone-number__link {
+        color: inherit;
+      }
+
+      .phone-number__icon {
+        stroke: currentcolor;
+      }
+    }
+  }
+}
