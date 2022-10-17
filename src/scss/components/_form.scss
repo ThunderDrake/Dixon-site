@@ -51,11 +51,7 @@
 
     &--tel {
       .form__input {
-        margin-bottom: 45px;
 
-        @include bp-600 {
-          margin-bottom: 30px;
-        }
       }
     }
   }
@@ -71,6 +67,14 @@
     box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
     font-size: 1.2em;
 
+    &--no-padding {
+      padding-left: 1.5em;
+
+      @include bp-425 {
+        padding-left: 1.5em;
+      }
+    }
+
     @include bp-600 {
       height: 4em;
     }
@@ -81,12 +85,14 @@
   }
 
   &__button {
+    margin-top: 45px;
     margin-bottom: 30px;
     padding-top: 1.75em;
     padding-bottom: 1.6em;
     width: 100%;
 
     @include bp-600 {
+      margin-top: 30px;
       padding-top: 1.2em;
       padding-bottom: 1em;
     }
@@ -116,4 +122,8 @@
 
 .custom-checkbox {
   @include custom-checkbox;
+}
+
+.form label:nth-last-of-type(2) .form__input {
+  margin-bottom: 0;
 }
