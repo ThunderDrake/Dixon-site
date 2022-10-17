@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="visually-hidden">
+      @include('img/symbol/svg/sprite.symbol.svg')
+    </div>
+    @include('partials/header.html')
+    <main class="main">
+      @include('partials/contacts-section.html', {"additional": true})
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
