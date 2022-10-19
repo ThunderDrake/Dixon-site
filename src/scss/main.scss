@@ -3,17 +3,10 @@
 @import "mixins";
 @import "fonts";
 @import "settings";
+@import "commons";
 
 // подключения компонентов страницы
-@import "./components/ui";
-@import "./components/header";
-@import "./components/custom-input";
-@import "./components/logo";
-@import "./components/submenu";
-@import "./components/burger";
-@import "./components/adress-block";
-@import "./components/navigation";
-@import "./components/header-phone-block";
+
 @import "./components/hero-section";
 @import "./components/hero-slider";
 @import "./components/advantages";
@@ -23,8 +16,6 @@
 @import "./components/product-card";
 @import "./components/recently";
 @import "./components/callback";
-@import "./components/form";
 @import "./components/contacts";
 @import "./components/delivery-page";
 @import "./components/credit-page";
-@import "./components/footer";
