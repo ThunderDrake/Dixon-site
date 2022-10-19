@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" class="page" style="height: 100%">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container d-flex f-col">
+    <div class="visually-hidden">
+      @include('img/symbol/svg/sprite.symbol.svg')
+    </div>
+    @include('partials/header.html')
+    <main class="main" style="padding-top: var(--header-height); flex: 1;">
+      <section class="credit-page">
+        <div class="container credit-page__container">
+          <h1 class="credit-page__title h2-title">Оформление в кредит</h1>
+          <div class="credit-page__content">
+            <span>1.Выберите товар и оформите заказ на сайте</span>
+            <p>Добавьте в корзину один или несколько товаров.<br>
+              Перейдите к оформлению заказа, на последнем шаге выберите способ оплаты «В кредит» и подходящий банк.<br>
+              Подтвердите оформление заказа.</p>
+            <span>2.Выберите товар и оформите заказ на сайте</span>
+            <p>Добавьте в корзину один или несколько товаров.<br>
+              Перейдите к оформлению заказа, на последнем шаге выберите способ оплаты «В кредит» и подходящий банк.<br>
+              Подтвердите оформление заказа.</p>
+            <span>3.Подпишите кредитный договор</span>
+            <p>Подпишите документы напрямую в магазине, либо через партнеров- в банке, курьером или по SMS.<br>
+              Банками предусмотрены различные способы подписания договоров. Варианты будут обозначены после одобрения вашей заявки. Выберите один из них и подпишите договор.</p>
+            <span>4.Заберите заказ в магазине</span>
+            <p>Если все товары в наличии, можете забрать заказ в магазине. Вам потребуется паспорт.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
