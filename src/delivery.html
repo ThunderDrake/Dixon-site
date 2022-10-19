@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru" class="page" style="height: 100%">
+
+@include('partials/head.html')
+
+<body class="page__body">
+  <div class="site-container d-flex f-col">
+    <div class="visually-hidden">
+      @include('img/symbol/svg/sprite.symbol.svg')
+    </div>
+    @include('partials/header.html')
+    <main class="main" style="padding-top: var(--header-height); flex: 1;">
+      <section class="delivery">
+        <h1 class="visually-hidden">Доставка и оплата товаров</h1>
+        <div class="container delivery__container">
+          <h2 class="delivery__title h2-title">Способы оплаты</h2>
+          <div class="delivery__text">
+            Оплатить покупку в сети магазинах Dixon можно несколькими способами:
+          </div>
+          <div class="delivery__text">
+            <div class="delivery__small-title">Наличный расчёт</div>
+            Вы можете оплатить покупку наличными в магазине или курьеру (при доставке товара - доступно не во всех городах).
+          </div>
+          <div class="delivery__text">
+            <div class="delivery__small-title">Пластиковые карты</div>
+            Безналичная оплата банковской картой в магазине и при доставке. Принимаются карты следующих платёжных систем:<br>
+            «VISA», «MasterCard», «Золотая Корона», «МИР».
+          </div>
+          <div class="delivery__text delivery__text--mb-50">
+            <div class="delivery__small-title">Кредит</div>
+            Заявку на кредит можно оформить в магазине у кредитного эксперта одного из банков-партнеров. В разделе «Оформление в кредит» Вы можете найти информацию о банках-партнёрах и их продуктах.
+          </div>
+          <h2 class="delivery__title h2-title">Способы доставки</h2>
+          <div class="delivery__variants">
+            <div class="delivery__variants-item">
+              <div class="delivery__variants-content">
+                <img loading="lazy" src="img/delivery-variants/delivery-pochta.png" class="delivery__variants-image" width="110" height="55" alt="Логотип Почтый России">
+                <div class="delivery__variants-descr">Ускоренная доставка по всей России с оплатой при получении</div>
+              </div>
+              <div class="delivery__variants-footer">
+                <div class="delivery__variants-title">Почта России (1 класс)</div>
+                <a class="delivery__variants-link" href="#">www.pochta.ru/</a>
+              </div>
+            </div>
+            <div class="delivery__variants-item">
+              <div class="delivery__variants-content">
+                <img loading="lazy" src="img/delivery-variants/delivery-pochta.png" class="delivery__variants-image" width="110" height="55" alt="Логотип Почтый России">
+                <div class="delivery__variants-descr">Доставку можно забрать в постаматах города на Почте России</div>
+              </div>
+              <div class="delivery__variants-footer">
+                <div class="delivery__variants-title">Почта России (постаматы)</div>
+                <a class="delivery__variants-link" href="#">www.pochta.ru/</a>
+              </div>
+            </div>
+            <div class="delivery__variants-item">
+              <div class="delivery__variants-content">
+                <img loading="lazy" src="img/delivery-variants/delivery-cdek.png" class="delivery__variants-image" width="110" height="32" alt="Логотип компаниий CDEK">
+                <div class="delivery__variants-descr">Пункты самовывоза и курьерская доставка</div>
+              </div>
+              <div class="delivery__variants-footer">
+                <div class="delivery__variants-title">СДЭК (пункты выдачи)</div>
+                <a class="delivery__variants-link" href="#">www.cdek.ru/ru/</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
