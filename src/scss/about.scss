@@ -1,0 +1,9 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "commons";
+@import "./components/about-page/hero-section";
+@import "./components/about-page/about-image-section";
+@import "./components/about-page/about-slider";
