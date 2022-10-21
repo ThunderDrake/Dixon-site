@@ -7,6 +7,7 @@ import { initAccordions } from './components/accordion/init-accordion';
 import { initMobileMenu } from './components/init-mobile-menu';
 import { initSubmenuMobile } from './components/init-submenu-mobile';
 import { initCertificatesSlider } from './components/init-certificates-slider';
+import { initVacancySelect } from './components/init-vacancy-select';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -15,6 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initAccordions();
   initMobileMenu();
   initSubmenuMobile();
+  initVacancySelect();
   window.addEventListener('load', () => {
     initCustomSelect();
     initHeroSlider();

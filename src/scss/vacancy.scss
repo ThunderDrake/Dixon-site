@@ -1,0 +1,8 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "commons";
+@import "./components/vacancy-page/vacancy-section";
+@import "./components/vacancy-page/vacancy-list";

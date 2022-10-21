@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru" class="page" style="height: 100%">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Dixon</title>
+    <link rel="preload" href="fonts/circe-light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/vacancy.css">
+    <script defer src="js/main.js"></script>
+  </head>
+
+<body class="page__body">
+  <div class="site-container d-flex f-col">
+    <div class="visually-hidden">
+      @include('img/symbol/svg/sprite.symbol.svg')
+    </div>
+    @include('partials/header.html')
+    <main class="main" style="padding-top: var(--header-height); flex: 1;">
+      <section class="vacancy">
+        <div class="vacancy__container container">
+          <h1 class="vacancy__title h2-title">Вакансии</h1>
+          <div class="vacancy__banner">
+            <picture>
+              <source srcset="img/vacancy/vacancy__section-image.avif" type="image/avif">
+              <source srcset="img/vacancy/vacancy__section-image.webp" type="image/webp">
+              <img loading="lazy" src="img/vacancy/vacancy__section-image.jpg" class="vacancy__image" width="1162" height="316" alt="Рука девушки держит телефон">
+            </picture>
+            <div class="vacancy__banner-info">
+              <div class="vacancy__banner-title">Мы <span>ждем тебя</span> в нашу дружную команду</div>
+              <a class="btn btn--main btn-reset vacancy__banner-button" href="/questionary/">Заполни анкету</a>
+            </div>
+          </div>
+          <p class="vacancy__section-text">Наша компания более 20 лет является стратегическим партнером операторов мобильной связи на территории Чувашской Республики - МегаФон, Билайн, МТС, Йота, Теле2 и Ростелеком.</p>
+          <div class="vacancy__content">
+            <div class="vacancy__list-title">Открытые вакансии</div>
+            <select class="vacancy__select" data-vacancy="Продавец-консультант">
+              <option placeholder>Продавец-консультант</option>
+              <option value="Продавец-консультант в салон связи МТС в Мадагаскар">Продавец-консультант в салон связи МТС в Мадагаскар</option>
+              <option value="Продавец-консультант в салон связи МТС в Мадагаскар">Продавец-консультант в салон связи МТС в Мадагаскар</option>
+            </select>
+            <select class="vacancy__select" data-vacancy="Мастер по ремонту мобильной техники">
+              <option placeholder>Мастер по ремонту мобильной техники</option>
+              <option value="Мастер по ремонту мобильной техники в салон связи МТС в Мадагаскар">Мастер по ремонту мобильной техники в салон связи МТС в Мадагаскар</option>
+              <option value="Мастер по ремонту мобильной техники в салон связи МТС в Мадагаскар">Мастер по ремонту мобильной техники в салон связи МТС в Мадагаскар</option>
+            </select>
+          </div>
+          <div class="vacancy__partners">
+            <div class="vacancy__partners-title">Нашими партнерами являются все федеральные операторы связи</div>
+            <img loading="lazy" src="img/vacancy/partner-1.png" class="vacancy__partners-image" width="200" height="36" alt="">
+            <img loading="lazy" src="img/vacancy/partner-2.png" class="vacancy__partners-image" width="200" height="36" alt="">
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>
