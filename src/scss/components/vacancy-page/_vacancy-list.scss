@@ -9,6 +9,10 @@
     font-size: 32px;
     line-height: 130%;
     color: #232323;
+
+    @include bp-600 {
+      font-size: 20px;
+    }
   }
 }
 
@@ -17,6 +21,10 @@
 
   .choices {
     max-width: 60%;
+
+    @include bp-800 {
+      max-width: none;
+    }
   }
 }
 
@@ -30,6 +38,12 @@
   line-height: 29px;
   color: #727385;
   background: #eaebf6;
+
+  @include bp-600 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+  }
 }
 
 .choices__list--dropdown,
@@ -38,6 +52,10 @@
   border-bottom-left-radius: 10px;
   padding: 30px;
   background: #eef0ff;
+
+  @include bp-600 {
+    padding: 15px;
+  }
 }
 
 .choices__list--dropdown .choices__item,

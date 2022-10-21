@@ -2,6 +2,14 @@
   padding-top: 85px;
   padding-bottom: 100px;
 
+  &__image {
+    border-radius: 10px;
+
+    @include bp-600 {
+      height: 150px;
+    }
+  }
+
   &__banner {
     position: relative;
     margin-bottom: 50px;
@@ -20,6 +28,14 @@
       span {
         font-weight: 700;
       }
+
+      @include bp-800 {
+        max-width: 300px;
+      }
+
+      @include bp-600 {
+        max-width: 200px;
+      }
     }
 
     &-title {
@@ -29,11 +45,32 @@
       line-height: 110%;
       text-align: center;
       color: #393186;
+
+      @include bp-800 {
+        font-size: 30px;
+      }
+
+      @include bp-600 {
+        font-size: 18px;
+      }
     }
 
     &-button {
       padding: 1.25em 2em;
       font-size: 20px;
+
+      @include bp-800 {
+        font-size: 16px;
+      }
+
+      @include bp-600 {
+        padding: 13px;
+        padding-bottom: 7px;
+      }
+    }
+
+    @include bp-600 {
+      margin-bottom: 20px;
     }
   }
 
@@ -42,6 +79,11 @@
     font-size: 24px;
     line-height: 150%;
     color: #232323;
+
+    @include bp-600 {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
   }
 
   &__partners {
@@ -51,6 +93,10 @@
       line-height: 150%;
       text-align: center;
       color: #232323;
+
+      @include bp-425 {
+        font-size: 18px;
+      }
     }
 
     &-image {
@@ -60,6 +106,15 @@
       &:not(:last-child) {
         margin-right: 58px;
       }
+
+      @include bp-425 {
+        width: 120px;
+      }
     }
+  }
+
+  @include bp-600 {
+    padding-top: 45px;
+    padding-bottom: 60px;
   }
 }
