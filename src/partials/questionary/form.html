@@ -1,0 +1,83 @@
+<section class="questionary">
+  <div class="questionary__container container">
+    <h1 class="questionary__title h2-title">Анкета соискателя</h1>
+    <div class="questionary__content">
+      <div class="questionary__subtitle">Заполните поля анкеты, и нажмите "Отправить"</div>
+      <form class="questionary__form" action="POST">
+        <div class="questionary__form-subtitle">Укажите информацию о себе</div>
+        <label class="questionary__item-select questionary__item--split">
+          <span>Должность</span>
+          <select class="questionary__select" name="position">
+            <option value="Продавец-консультант">Продавец-консультант</option>
+            <option value="Продавец-консультант">Продавец-консультант2</option>
+            <option value="Продавец-консультант">Продавец-консультант3</option>
+          </select>
+        </label>
+        <label class="questionary__item">
+          <input class="questionary__input" type="text" name="name">
+          <span class="questionary__item-placeholder questionary__item-placeholder--required">Ваши Ф.И.О</span>
+        </label>
+        <label class="questionary__item">
+          <input class="questionary__input" type="tel" name="phone">
+          <span class="questionary__item-placeholder questionary__item-placeholder--required">Телефон</span>
+        </label>
+        <label class="questionary__item">
+          <input class="questionary__input" type="text" name="birthday">
+          <span class="questionary__item-placeholder questionary__item-placeholder--required">Дата рождения</span>
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder questionary__item-placeholder--required">Гражданство</span>
+          <input class="questionary__input" type="text" name="citizenship">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Семейное положение</span>
+          <input class="questionary__input" type="text" name="marital_status">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Дети</span>
+          <input class="questionary__input" type="text" name="babes">
+        </label>
+        <div class="questionary__form-subtitle">Укажите данные об образовании и работе</div>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Образование</span>
+          <input class="questionary__input" type="text" name="education">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Год окончания обучения</span>
+          <input class="questionary__input" type="text" name="education_end">
+        </label>
+        <label class="questionary__item-select">
+          <select class="questionary__select" name="position" placeholder="Форма обучения">
+            <option placeholder>Форма обучения</option>
+            <option value="Форма обучения">Форма обучения1</option>
+            <option value="Форма обучения">Форма обучения2</option>
+            <option value="Форма обучения">Форма обучения3</option>
+          </select>
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Укажите последнее место работы</span>
+          <input class="questionary__input" type="text" name="last_work">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Должность</span>
+          <input class="questionary__input" type="text" name="last_position">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Период работы</span>
+          <input class="questionary__input" type="text" name="last_work_time">
+        </label>
+        <div class="questionary__form-subtitle">Работаете ли Вы сейчас?</div>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Ожидаемый уровень дохода</span>
+          <input class="questionary__input" type="text" name="money">
+        </label>
+        <label class="questionary__item">
+          <span class="questionary__item-placeholder">Когда готовы приступить к работе?</span>
+          <input class="questionary__input" type="text" name="work_start">
+        </label>
+        <button type="submit" class="questionary__submit btn btn--main btn-reset">Отправить</button>
+        <div class="questionary__policy">Нажимая на кнопку, я принимаю условия соглашения на обработку моих персональных данных <span>*</span></div>
+      </form>
+    </div>
+  </div>
+</section>
