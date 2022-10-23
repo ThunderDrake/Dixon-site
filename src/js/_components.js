@@ -9,6 +9,7 @@ import { initSubmenuMobile } from './components/init-submenu-mobile';
 import { initCertificatesSlider } from './components/init-certificates-slider';
 import { initVacancySelect } from './components/init-vacancy-select';
 import { initQuestionaryForm } from './components/init-questionary-form';
+import { initShowMoreFetch } from './components/init-catalog-filter';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -19,6 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
   initSubmenuMobile();
   initVacancySelect();
   initQuestionaryForm();
+  initShowMoreFetch();
+
+
   window.addEventListener('load', () => {
     initCustomSelect();
     initHeroSlider();

@@ -1,0 +1,75 @@
+<div class="filter" data-filter>
+  <div class="container" data-validate>
+    <form class="filter__form stop-clear" action="/product-catalog.html" method="get">
+      <div class="filter__block">
+        <div class="custom-select" data-select>
+          <button class="custom-select__button" type="button" aria-label="Выбрать тип материала"><span class="custom-select__placeholder">Тип материала</span><span class="custom-select__icon"></span></button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_all">
+              <div class="custom-checkbox">
+                <label for="type_all">
+                  <input type="checkbox" name="type-all" id="type_all" value="all"><span class="checkbox-icon"></span><span class="checkbox-text">Все</span>
+                </label>
+              </div>
+            </li>
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_announcement">
+              <div class="custom-checkbox">
+                <label for="type_announcement">
+                  <input type="checkbox" name="type-announcement" id="type_announcement" value="announcement"><span class="checkbox-icon"></span><span class="checkbox-text">Анонс</span>
+                </label>
+              </div>
+            </li>
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_blogs">
+              <div class="custom-checkbox">
+                <label for="type_blogs">
+                  <input type="checkbox" name="type-blogs" id="type_blogs" value="blogs"><span class="checkbox-icon"></span><span class="checkbox-text">В&nbsp;блогах</span>
+                </label>
+              </div>
+            </li>
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_material">
+              <div class="custom-checkbox">
+                <label for="type_material">
+                  <input type="checkbox" name="type-material" id="type_material" value="material"><span class="checkbox-icon"></span><span class="checkbox-text">Материал</span>
+                </label>
+              </div>
+            </li>
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_memorial_1">
+              <div class="custom-checkbox">
+                <label for="type_memorial_1">
+                  <input type="checkbox" name="type-memorial" id="type_memorial_1" value="memorial-info"><span class="checkbox-icon"></span><span class="checkbox-text">Сообщения Мемориала</span>
+                </label>
+              </div>
+            </li>
+            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_memorial_2">
+              <div class="custom-checkbox">
+                <label for="type_memorial_2">
+                  <input type="checkbox" name="type-memorial" id="type_memorial_2" value="memorial-info"><span class="checkbox-icon"></span><span class="checkbox-text">Сообщения Мемориала</span>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="custom-select--180 custom-select" data-select data-name="letter" data-id="letter">
+          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__placeholder">Все направления</span><span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="item1" aria-selected="false" role="option">item1</li>
+            <li class="custom-select__item" tabindex="0" data-select-value="item2" aria-selected="false" role="option">item2</li>
+          </ul>
+        </div>
+        <div class="custom-select--180 custom-select" data-select data-name="location" data-id="location">
+          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__placeholder">Регион</span><span class="custom-select__text"></span><span class="custom-select__icon"></span>
+          </button>
+          <ul class="custom-select__list" role="listbox">
+            <li class="custom-select__item" tabindex="0" data-select-value="item1" aria-selected="false" role="option">item1</li>
+            <li class="custom-select__item" tabindex="0" data-select-value="item2" aria-selected="false" role="option">item2</li>
+          </ul>
+        </div>
+        <button class="btn btn btn--white-on-blue filter__submit" type="submit" aria-label="">Применить</button>
+      </div>
+      <div class="filter__reset">
+        <button type="reset" aria-label="Сбросить фильтры">Очистить</button>
+      </div>
+    </form>
+  </div>
+</div>

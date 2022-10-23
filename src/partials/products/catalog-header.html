@@ -1,0 +1,32 @@
+<div class="catalog__header">
+  <div class="catalog__header-info">
+    <a class="catalog__header-link" href="#">Кредит</a>
+    <a class="catalog__header-link" href="#">Оплата и доставка</a>
+  </div>
+  <h1 class="catalog__title h2-title">Телефоны</h1>
+  <div class="catalog__header-nav">
+    <div class="catalog__breadcrumbs">
+      <a class="catalog__breadcrumbs-item" href="/">Главная</a>
+      <a class="catalog__breadcrumbs-item" href="/catalog/">Каталог товаров</a>
+      <span class="catalog__breadcrumbs-item catalog__breadcrumbs-item--active catalog-link">Телефоны</span>
+    </div>
+    <div class="custom-select custom-select--sort catalog__sort" data-select data-validate-type="select" data-name="sort" data-id="sort">
+      <span class="custom-select__placeholder catalog__sort-button-text">Сначала популярные</span>
+      <button class="custom-select__button catalog__sort-button" type="button" aria-label="Сортировать по...">
+        <span class="custom-select__text"></span>
+        <svg class="catalog__sort-icon" width="20" height="17" aria-hidden="true">
+          <use xlink:href="img/sprite.svg#sort"></use>
+        </svg>
+      </button>
+      <ul class="custom-select__list catalog__sort-list" role="listbox">
+        <li class="custom-select__item catalog__sort-list-item" tabindex="0" data-select-value="new-first" aria-selected="false" role="option">Сначала новые</li>
+        <li class="custom-select__item catalog__sort-list-item" tabindex="0" data-select-value="old-first" aria-selected="false" role="option">Сначала старые</li>
+      </ul>
+      <select id="sort" name="sort" tabindex="-1" aria-hidden="true" class="visually-hidden">
+        <option value=""></option>
+        <option value="new-first"></option>
+        <option value="old-first"></option>
+      </select>
+    </div>
+  </div>
+</div>

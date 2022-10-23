@@ -1,0 +1,9 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "commons";
+@import "./components/product-card";
+@import "./components/recently";
+@import "./components/products/catalog";

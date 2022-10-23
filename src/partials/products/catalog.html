@@ -1,0 +1,10 @@
+<section class="catalog">
+  <div class="catalog__container container">
+    @include('../products/catalog-header.html')
+    <asise class="catalog__aside">
+      @include('../products/catalog-filter.html')
+    </asise>
+    @include('../products/catalog-list.html')
+    @include('../../partials/contacts-section.html', {"additional": true})
+  </div>
+</section>
