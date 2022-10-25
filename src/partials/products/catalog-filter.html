@@ -1,75 +1,93 @@
 <div class="filter" data-filter>
-  <div class="container" data-validate>
+  <div class="filter__container container" data-validate>
+    <div class="filter__header">
+      <div class="filter__header-title">Фильтр</div>
+      <button class="popup-close-btn btn-reset" type="button" aria-label="Закрыть попап" data-popup-close="">
+        <svg width="10" height="10" aria-hidden="true">
+            <use xlink:href="#popup-close"></use>
+        </svg>
+      </button>
+    </div>
     <form class="filter__form stop-clear" action="/product-catalog.html" method="get">
-      <div class="filter__block">
-        <div class="custom-select" data-select>
-          <button class="custom-select__button" type="button" aria-label="Выбрать тип материала"><span class="custom-select__placeholder">Тип материала</span><span class="custom-select__icon"></span></button>
-          <ul class="custom-select__list" role="listbox">
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_all">
-              <div class="custom-checkbox">
-                <label for="type_all">
-                  <input type="checkbox" name="type-all" id="type_all" value="all"><span class="checkbox-icon"></span><span class="checkbox-text">Все</span>
-                </label>
+      <div class="filter__block" data-accordion="parent">
+        <div class="filter-button" data-accordion="element">
+          <div class="custom-select" data-select data-multiple="true" data-validate-type="select" data-name="school">
+            <button class="custom-select__button" type="button" aria-label="Выберите одну из опций" data-accordion="button">
+              <span class="custom-select__icon">
+                <svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.9241 5.14856C11.9245 5.34715 11.8554 5.53961 11.7286 5.69252C11.6573 5.77859 11.5697 5.84973 11.4708 5.90188C11.3719 5.95402 11.2637 5.98615 11.1524 5.99641C11.041 6.00667 10.9288 5.99488 10.822 5.96169C10.7153 5.9285 10.6161 5.87458 10.5302 5.80302L5.97449 1.99524L1.41027 5.66702C1.32333 5.73763 1.22329 5.79035 1.11591 5.82216C1.00853 5.85398 0.895917 5.86426 0.78455 5.85241C0.673182 5.84056 0.565254 5.80682 0.466969 5.75313C0.368684 5.69943 0.281979 5.62684 0.211839 5.53953C0.134463 5.45159 0.0760988 5.34861 0.0404102 5.23704C0.00472169 5.12547 -0.00752072 5.00773 0.00445072 4.89121C0.0164222 4.77469 0.0523493 4.6619 0.109977 4.55992C0.167605 4.45794 0.24569 4.36898 0.339331 4.29861L5.43903 0.193353C5.59111 0.0683408 5.78187 0 5.97874 0C6.17561 0 6.36638 0.0683408 6.51846 0.193353L11.6182 4.4431C11.721 4.52836 11.8023 4.63667 11.8555 4.75925C11.9086 4.88182 11.9322 5.01519 11.9241 5.14856Z" fill="#A4A4A4"/>
+                </svg>
+              </span>
+              <span class="custom-select__label">Цеха и школы</span>
+              <span class="custom-select__text visually-hidden"></span>
+            </button>
+            <div data-accordion="content">
+              <div class="custom-select__list" data-accordion="content">
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-0">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Медиашкола</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-1">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Школа компетенций</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-2">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Школа точных наук</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-3">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Исторический цех</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-4">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Цех философии и религоведения</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-5">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Цех филологии и наук о культуре</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-6">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Цех политологии и права</span>
+                </div>
+                <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="filter-school-7">
+                  <div class="option-item__check">
+                    <svg width="10" height="9" aria-hidden="true">
+                      <use xlink:href="#icon-check"></use>
+                    </svg>
+                  </div><span>Бизнес школа</span>
+                </div>
               </div>
-            </li>
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_announcement">
-              <div class="custom-checkbox">
-                <label for="type_announcement">
-                  <input type="checkbox" name="type-announcement" id="type_announcement" value="announcement"><span class="checkbox-icon"></span><span class="checkbox-text">Анонс</span>
-                </label>
-              </div>
-            </li>
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_blogs">
-              <div class="custom-checkbox">
-                <label for="type_blogs">
-                  <input type="checkbox" name="type-blogs" id="type_blogs" value="blogs"><span class="checkbox-icon"></span><span class="checkbox-text">В&nbsp;блогах</span>
-                </label>
-              </div>
-            </li>
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_material">
-              <div class="custom-checkbox">
-                <label for="type_material">
-                  <input type="checkbox" name="type-material" id="type_material" value="material"><span class="checkbox-icon"></span><span class="checkbox-text">Материал</span>
-                </label>
-              </div>
-            </li>
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_memorial_1">
-              <div class="custom-checkbox">
-                <label for="type_memorial_1">
-                  <input type="checkbox" name="type-memorial" id="type_memorial_1" value="memorial-info"><span class="checkbox-icon"></span><span class="checkbox-text">Сообщения Мемориала</span>
-                </label>
-              </div>
-            </li>
-            <li class="custom-select__item multi-checkbox" tabindex="0" role="option" data-select-value="type_memorial_2">
-              <div class="custom-checkbox">
-                <label for="type_memorial_2">
-                  <input type="checkbox" name="type-memorial" id="type_memorial_2" value="memorial-info"><span class="checkbox-icon"></span><span class="checkbox-text">Сообщения Мемориала</span>
-                </label>
-              </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
-        <div class="custom-select--180 custom-select" data-select data-name="letter" data-id="letter">
-          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__placeholder">Все направления</span><span class="custom-select__text"></span><span class="custom-select__icon"></span>
-          </button>
-          <ul class="custom-select__list" role="listbox">
-            <li class="custom-select__item" tabindex="0" data-select-value="item1" aria-selected="false" role="option">item1</li>
-            <li class="custom-select__item" tabindex="0" data-select-value="item2" aria-selected="false" role="option">item2</li>
-          </ul>
-        </div>
-        <div class="custom-select--180 custom-select" data-select data-name="location" data-id="location">
-          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__placeholder">Регион</span><span class="custom-select__text"></span><span class="custom-select__icon"></span>
-          </button>
-          <ul class="custom-select__list" role="listbox">
-            <li class="custom-select__item" tabindex="0" data-select-value="item1" aria-selected="false" role="option">item1</li>
-            <li class="custom-select__item" tabindex="0" data-select-value="item2" aria-selected="false" role="option">item2</li>
-          </ul>
-        </div>
-        <button class="btn btn btn--white-on-blue filter__submit" type="submit" aria-label="">Применить</button>
       </div>
-      <div class="filter__reset">
-        <button type="reset" aria-label="Сбросить фильтры">Очистить</button>
-      </div>
+      <div class="filter-popup-buttons filter-popup-buttons--main">
+        <button class="filter-popup-buttons__btn filter-popup-buttons__btn--apply btn" type="button" aria-label="применить" data-popup-close=""><span>применить</span></button>
+        <button class="filter-popup-buttons__btn filter-popup-buttons__btn--close btn btn--border-blue" type="button" aria-label="очистить" data-filter-clear=""><span>очистить</span></button>
+    </div>
     </form>
   </div>
 </div>

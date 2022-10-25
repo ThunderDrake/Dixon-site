@@ -92,7 +92,7 @@ const createMultiString = (arr) => {
 
 const setSelectActiveState = (multiple, insert, item) => {
   const buttonTextBlock = item.querySelector('.custom-select__text');
-  const activeItems = item.querySelectorAll('.custom-select__item[aria-selected="true"]');
+  const activeItems = item.querySelectorAll('.custom-select-item[aria-selected="true"]');
   const label = item.querySelector('.custom-select__label');
   const str = createMultiString(activeItems);
 
@@ -129,7 +129,7 @@ const createSelectStructure = (item) => {
   const name = item.dataset.name;
   const required = item.dataset.required;
   const insert = item.dataset.insert;
-  const selectItems = item.querySelectorAll('.custom-select__item');
+  const selectItems = item.querySelectorAll('.custom-select-item');
   const activeIndex = setActiveState(multiple, selectItems);
 
   if (activeIndex.length) {
@@ -175,7 +175,7 @@ const clickAction = (el, index) => {
   const itemText = el.innerText;
   const options = parent.querySelectorAll('option');
   const select = parent.querySelector('select');
-  const changeEv = new CustomEvent('change');
+  const changeEv = new CustomEvent('change', {bubbles: true, detail: {value: el.getAttribute('data-select-value'), element: el}});
   const inputEv = new CustomEvent('input');
   select.dispatchEvent(changeEv);
   select.dispatchEvent(inputEv);
@@ -192,7 +192,7 @@ const clickAction = (el, index) => {
     if (insert === 'true') {
       if (el.getAttribute('aria-selected') === 'true') {
         el.setAttribute('aria-selected', 'false');
-        const activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
+        const activeItems = parent.querySelectorAll('.custom-select-item[aria-selected="true"]');
         const str = createMultiString(activeItems);
         options[index + 1].selected = false;
         buttonTextBlock.innerText = str;
@@ -202,7 +202,7 @@ const clickAction = (el, index) => {
         }
       } else {
         el.setAttribute('aria-selected', 'true');
-        const activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
+        const activeItems = parent.querySelectorAll('.custom-select-item[aria-selected="true"]');
         const str = createMultiString(activeItems);
         buttonTextBlock.innerText = str;
         parent.classList.add('not-empty');
@@ -219,7 +219,7 @@ const clickAction = (el, index) => {
       }
     }
   } else {
-    const activeItem = parent.querySelector('.custom-select__item[aria-selected="true"]');
+    const activeItem = parent.querySelector('.custom-select-item[aria-selected="true"]');
     if (el.getAttribute('aria-selected') === 'true') {
       closeSelect();
     } else {
@@ -228,11 +228,9 @@ const clickAction = (el, index) => {
         parent.classList.remove('not-empty');
         parent.classList.remove('is-valid');
       }
-      if (buttonTextBlock) {
-        buttonTextBlock.innerText = itemText;
-        parent.classList.add('not-empty');
-      }
+      buttonTextBlock.innerText = itemText;
       el.setAttribute('aria-selected', 'true');
+      parent.classList.add('not-empty');
       parent.classList.add('is-valid');
       options[index + 1].selected = true;
       closeSelect();
@@ -311,7 +309,7 @@ const onSelectKeydown = (e) => {
 const setSelectAction = (item) => {
   const customSelect = item;
   const button = customSelect.querySelector('.custom-select__button');
-  const selectItems = customSelect.querySelectorAll('.custom-select__item');
+  const selectItems = customSelect.querySelectorAll('.custom-select-item');
 
   button.addEventListener('click', onSelectClick);
   button.addEventListener('keydown', onSelectKeydown);

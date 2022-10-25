@@ -86,7 +86,6 @@ export class Accordions {
       }
       content.style.transition = 'none';
       content.style.maxHeight = `${content.scrollHeight}px`;
-      console.log(content.scrollHeight);
       setTimeout(() => {
         content.style.transition = null;
       });
@@ -134,8 +133,6 @@ export class Accordions {
       this.openAccordion(parentElement.closest('[data-accordion="element"]'), transition);
       return;
     }
-
-    console.log(contentElement.scrollHeight);
 
     this._openHeight = 0;
   }

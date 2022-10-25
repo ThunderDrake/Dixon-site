@@ -1,62 +1,16 @@
-import { initCustomSelect } from "./components/init-custom-select";
-import { initSubmenu } from "./components/init-submenu";
-import { getHeaderHeight } from './functions/header-height';
-import { initHeroSlider } from './components/init-hero-slider';
-import { initTabs } from './components/init-tabs';
-import { initAccordions } from './components/accordion/init-accordion';
-import { initMobileMenu } from './components/init-mobile-menu';
-import { initSubmenuMobile } from './components/init-submenu-mobile';
-import { initCertificatesSlider } from './components/init-certificates-slider';
-import { initVacancySelect } from './components/init-vacancy-select';
-import { initQuestionaryForm } from './components/init-questionary-form';
-import { FetchMore, getParams, updateURL } from './components/init-show-more-fetch';
-import { initPopups, closePopup } from './components/init-popups';
-// import { initFilters } from './components/init-filters';
-import { burger } from './functions/burger';
-
-window.addEventListener('DOMContentLoaded', () => {
-  initSubmenu();
-  getHeaderHeight();
-  initAccordions();
-  initMobileMenu();
-  initSubmenuMobile();
-  initVacancySelect();
-  initQuestionaryForm();
-
-
-  window.addEventListener('load', () => {
-    const initFetchMore = () => {
-      const data = {
-        catalog: [
-          '[data-name="catalog-content"]',
-          '[data-name="catalog-content-item"]',
-          '[data-name="courses-more"]',
-          '[data-filter] form'
-        ],
-      };
-
-      Object.values(data)
-          .forEach((selectors) =>
-            new FetchMore().init(...selectors));
-    };
-    initFetchMore();
-    // initFilters();
-    initCustomSelect();
-    initHeroSlider();
-    initTabs();
-    initCertificatesSlider();
-    initPopups();
-  });
-});
+import {getParams, updateURL} from './init-show-more-fetch';
+import {closePopup} from './init-popups';
 
 const initFilters = () => {
-  const filters = document.querySelector('.filter');
+  const filters = document.querySelector('.filters');
 
   if (!filters) {
     return;
   }
 
   const selectItems = filters.querySelectorAll('.custom-select-item');
+  const list = filters.querySelector('.selected-filters-list');
+  const counts = filters.querySelectorAll('[data-count]');
   const clearButtons = filters.querySelectorAll('[data-filter-clear]');
 
   const inputSearchInput = filters.querySelector('[data-input-search="input"]');
@@ -74,7 +28,7 @@ const initFilters = () => {
     setTimeout(() => {
       const filterParams = getParams();
 
-      updateURL('');
+      updateURL(filterParams);
     }, 300);
 
     // if (selectSearchSelect) {
@@ -109,6 +63,37 @@ const initFilters = () => {
     });
   });
 
+  filters.addEventListener('change', ({target, detail}) => {
+    setTimeout(() => {
+      if (target.type === 'radio' || target.type === 'checkbox') {
+        form.dispatchEvent(new CustomEvent('change'));
+      }
+      if (detail) {
+        if (detail.element.getAttribute('aria-selected') === 'true') {
+          list.append(renderElement(detail.element.querySelector('span').textContent, detail.value));
+        } else {
+          const item = list.querySelector(`.selected-filters__item[data-value="${detail.value}"]`);
+          if (item) {
+            item.remove();
+          }
+        }
+      }
+      const count = list.querySelectorAll('.selected-filters__item').length;
+      counts.forEach((item) => {
+        if (count) {
+          item.classList.remove('hidden');
+          item.innerHTML = count.toString();
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      if (count) {
+        list.classList.add('active');
+      } else {
+        list.classList.remove('active');
+      }
+    }, 100)
+  });
 
   // Поиск по селекту
   if (selectSearchButton) {
@@ -206,12 +191,14 @@ const initFilters = () => {
         }
       } else if (filter.type === 'search')  {
         inputSearchInput.value = filterValues[0];
+        list.append(renderElement(inputSearchInput.value, false, 'selected-filters__item--search'));
       } else {
         filterValues.forEach((el) => {
           const optionToCheck = filter.querySelector(`[data-select-value="${el}"]`);
           const hiddenOptionToCheck = filter.querySelector(`[value="${el}"]`);
           if (optionToCheck) {
             optionToCheck.setAttribute('aria-selected', 'true');
+            list.append(renderElement(optionToCheck.querySelector('span').textContent, el));
           }
           if (hiddenOptionToCheck) {
             hiddenOptionToCheck.selected = true;
@@ -225,4 +212,5 @@ const initFilters = () => {
   onPageLoad()
 };
 
-initFilters();
+
+export {initFilters};
