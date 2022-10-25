@@ -1,4 +1,4 @@
-<div class="catalog__header">
+<div class="catalog__header product-header">
   <div class="catalog__header-info">
     <a class="catalog__header-link" href="#">Кредит</a>
     <a class="catalog__header-link" href="#">Оплата и доставка</a>
@@ -10,24 +10,60 @@
       <a class="catalog__breadcrumbs-item" href="/catalog/">Каталог товаров</a>
       <span class="catalog__breadcrumbs-item catalog__breadcrumbs-item--active catalog-link">Телефоны</span>
     </div>
-    <div class="custom-select custom-select--sort catalog__sort" data-select data-validate-type="select" data-name="sort" data-id="sort">
-      <span class="custom-select__placeholder catalog__sort-button-text">Сначала популярные</span>
-      <button class="custom-select__button catalog__sort-button" type="button" aria-label="Сортировать по...">
-        <span class="custom-select__text"></span>
-        <svg class="catalog__sort-icon" width="20" height="17" aria-hidden="true">
-          <use xlink:href="img/sprite.svg#sort"></use>
-        </svg>
-      </button>
-      <ul class="custom-select__list catalog__sort-list" role="listbox">
-        <li class="custom-select__item catalog__sort-list-item" tabindex="0" data-select-value="new-first" aria-selected="false" role="option">Сначала новые</li>
-        <li class="custom-select__item catalog__sort-list-item" tabindex="0" data-select-value="old-first" aria-selected="false" role="option">Сначала старые</li>
-      </ul>
-      <select id="sort" name="sort" tabindex="-1" aria-hidden="true" class="visually-hidden">
-        <option value=""></option>
-        <option value="new-first"></option>
-        <option value="old-first"></option>
-      </select>
+
+    <div class="product-header__sort" data-accordion="parent">
+      <div class="product-header__sort-button" data-accordion="element">
+        <div class="custom-select" data-select data-validate-type="select" data-name="sort">
+          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"
+            data-accordion="button">
+            <span class="custom-select__label">Сортировка</span>
+            <span class="custom-select__text visually-hidden"></span>
+          </button>
+          <div data-accordion="content">
+            <div class="custom-select__list" data-accordion="content">
+              <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox"
+                data-select-value="old-first">
+                <div class="option-item__check">
+                  <svg width="10" height="9" aria-hidden="true">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </div><span>Сначала старые</span>
+              </div>
+              <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox"
+                data-select-value="new-first">
+                <div class="option-item__check">
+                  <svg width="10" height="9" aria-hidden="true">
+                    <use xlink:href="#icon-check"></use>
+                  </svg>
+                </div><span>Сначала новые</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+
+    <!-- <div data-accordion="parent">
+      <div class="custom-select custom-select--sort catalog__sort" data-select data-multiple="true" data-validate-type="select" data-name="sort" data-accordion="element">
+        <button class="custom-select__button catalog__sort-button" type="button" aria-label="Выберите одну из опций" data-accordion="button">
+          <span class="custom-select__text">Сортировка</span>
+          <svg class="catalog__sort-icon" width="20" height="17" aria-hidden="true">
+            <use xlink:href="img/sprite.svg#sort"></use>
+          </svg>
+        </button>
+        <div data-accordion="content">
+          <div class="custom-select__list catalog__sort-list" data-accordion="content">
+            <div class="custom-select-item option-item catalog__sort-list-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="old-first">
+              <span>Сначала старые</span>
+            </div>
+            <div class="custom-select-item option-item catalog__sort-list-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="new-first">
+              <span>Сначала новые</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
     <button class="btn btn-reset catalog__filter-button" data-popup-target="filter">Фильтр</button>
   </div>
 </div>

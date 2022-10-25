@@ -158,7 +158,7 @@ const createSelectStructure = (item) => {
 
 const closeSelect = () => {
   const activeSelect = document.querySelector('[data-select].is-open');
-  document.removeEventListener('click', onDocumentClick);
+  // document.removeEventListener('click', onDocumentClick);
   document.removeEventListener('keydown', onEscapePress);
   if (activeSelect) {
     activeSelect.classList.remove('is-open');
@@ -221,7 +221,7 @@ const clickAction = (el, index) => {
   } else {
     const activeItem = parent.querySelector('.custom-select-item[aria-selected="true"]');
     if (el.getAttribute('aria-selected') === 'true') {
-      closeSelect();
+      // closeSelect();
     } else {
       if (activeItem) {
         activeItem.setAttribute('aria-selected', 'false');
@@ -233,7 +233,7 @@ const clickAction = (el, index) => {
       parent.classList.add('not-empty');
       parent.classList.add('is-valid');
       options[index + 1].selected = true;
-      closeSelect();
+      // closeSelect();
     }
   }
 };
@@ -283,10 +283,10 @@ const onSelectClick = (e) => {
   }
 
   if (activeSelect) {
-    closeSelect();
+    // closeSelect();
   }
 
-  document.addEventListener('click', onDocumentClick);
+  // document.addEventListener('click', onDocumentClick);
   document.addEventListener('keydown', onEscapePress);
 
   if (parent.classList.contains('is-open')) {

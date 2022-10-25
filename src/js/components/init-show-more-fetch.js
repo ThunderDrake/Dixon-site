@@ -219,6 +219,7 @@ export class FetchMore {
 const filterForm = document.querySelector('[data-filter] form');
 let list = document.querySelector('[data-name="catalog-content"]');
 let btnReset;
+let sortSelect;
 
 
 const updateURL = (params) => {
@@ -271,7 +272,7 @@ const handleMoreClick = (evt) => {
 
   if (isBntReset) {
     filterForm.reset();
-    // resetSortBtn();
+    resetSortBtn();
   }
 
   const filterParams = getParams(isBntReset);
@@ -325,10 +326,12 @@ const initShowMoreFetch = () => {
 
   sortSelect = document.querySelector('[data-name="sort"] select');
   btnReset = document.querySelector('[data-filter-clear]');
+  console.log(sortSelect);
 
   if (sortSelect) {
-    sortSelect.addEventListener('change', (evt) =>
-      setTimeout(() => handleMoreClick(evt), 100));
+    sortSelect.addEventListener('change', (evt) =>{
+      setTimeout(() => updateURL(`?${(new URLSearchParams({'sort': evt.detail.value})).toString().replace(/%2C/g,",")}`), 100)
+    });
   }
 
   btnReset.addEventListener('click', handleMoreClick);
