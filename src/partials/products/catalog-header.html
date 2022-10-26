@@ -1,26 +1,29 @@
 <div class="catalog__header product-header">
-  <div class="catalog__header-info">
-    <a class="catalog__header-link" href="#">Кредит</a>
-    <a class="catalog__header-link" href="#">Оплата и доставка</a>
+  <div class="product-header__info">
+    <a class="product-header__link" href="#">Кредит</a>
+    <a class="product-header__link" href="#">Оплата и доставка</a>
   </div>
   <h1 class="catalog__title h2-title">Телефоны</h1>
-  <div class="catalog__header-nav">
-    <div class="catalog__breadcrumbs">
-      <a class="catalog__breadcrumbs-item" href="/">Главная</a>
-      <a class="catalog__breadcrumbs-item" href="/catalog/">Каталог товаров</a>
-      <span class="catalog__breadcrumbs-item catalog__breadcrumbs-item--active catalog-link">Телефоны</span>
+  <div class="product-header__nav">
+    <div class="breadcrumbs">
+      <a class="breadcrumbs__item" href="/">Главная</a>
+      <a class="breadcrumbs__item" href="/catalog/">Каталог товаров</a>
+      <span class="breadcrumbs__item breadcrumbs__item--active">Телефоны</span>
     </div>
 
     <div class="product-header__sort" data-accordion="parent">
-      <div class="product-header__sort-button" data-accordion="element">
-        <div class="custom-select" data-select data-validate-type="select" data-name="sort">
-          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"
+      <div class="product-header__sort-elem" data-accordion="element">
+        <div class="custom-select product-header__sort" data-select data-validate-type="select" data-name="sort">
+          <button class="custom-select__button product-header__sort-button" type="button" aria-label="Выберите одну из опций"
             data-accordion="button">
             <span class="custom-select__label">Сортировка</span>
             <span class="custom-select__text visually-hidden"></span>
+            <svg class="catalog__sort-icon" width="20" height="17" aria-hidden="true">
+              <use xlink:href="img/sprite.svg#sort"></use>
+            </svg>
           </button>
           <div data-accordion="content">
-            <div class="custom-select__list" data-accordion="content">
+            <div class="custom-select__list product-header__sort-list" data-accordion="content">
               <div class="custom-select-item option-item" tabindex="0" aria-checked="false" role="checkbox"
                 data-select-value="old-first">
                 <div class="option-item__check">
@@ -43,27 +46,6 @@
       </div>
     </div>
 
-
-    <!-- <div data-accordion="parent">
-      <div class="custom-select custom-select--sort catalog__sort" data-select data-multiple="true" data-validate-type="select" data-name="sort" data-accordion="element">
-        <button class="custom-select__button catalog__sort-button" type="button" aria-label="Выберите одну из опций" data-accordion="button">
-          <span class="custom-select__text">Сортировка</span>
-          <svg class="catalog__sort-icon" width="20" height="17" aria-hidden="true">
-            <use xlink:href="img/sprite.svg#sort"></use>
-          </svg>
-        </button>
-        <div data-accordion="content">
-          <div class="custom-select__list catalog__sort-list" data-accordion="content">
-            <div class="custom-select-item option-item catalog__sort-list-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="old-first">
-              <span>Сначала старые</span>
-            </div>
-            <div class="custom-select-item option-item catalog__sort-list-item" tabindex="0" aria-checked="false" role="checkbox" data-select-value="new-first">
-              <span>Сначала новые</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <button class="btn btn-reset catalog__filter-button" data-popup-target="filter">Фильтр</button>
   </div>
 </div>

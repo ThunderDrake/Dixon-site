@@ -22,31 +22,6 @@
     }
   }
 
-  &__header {
-    grid-column: span 2;
-
-    &-info {
-      margin-bottom: 58px;
-    }
-
-    &-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    &-link {
-      font-weight: 400;
-      font-size: 16px;
-      line-height: 100%;
-      color: #727385;
-
-      &:not(:last-child) {
-        margin-right: 58px;
-      }
-    }
-  }
-
   &__filter-button {
     display: none;
 
@@ -72,91 +47,6 @@
 
     @include bp-800 {
       grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
-  &__breadcrumbs {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-
-    a.catalog__breadcrumbs-item {
-      transition: color 0.3s ease-in;
-
-      &:hover {
-        color: #727385;
-      }
-    }
-
-    &-item {
-      position: relative;
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 100%;
-      letter-spacing: 0.01em;
-      color: #a4a4a4;
-
-      &:not(:last-child) {
-        margin-right: 12px;
-        padding-right: 17px;
-
-        &::before {
-          content: ">";
-          position: absolute;
-          right: 0;
-          top: 50%;
-          font-size: inherit;
-          color: #a4a4a4;
-          transform: translateY(-50%);
-        }
-      }
-
-      &--active {
-        color: #727385;
-      }
-    }
-  }
-
-  &__sort {
-    width: 100%;
-    max-width: 220px;
-
-    &-button {
-      justify-content: flex-end;
-      border: none;
-
-      &-text,
-      .custom-select__text {
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0.01em;
-        color: #414146;
-      }
-
-      &:hover,
-      &:focus {
-        border: none;
-      }
-    }
-
-    &-list {
-      border: none;
-      border-radius: 5px;
-      box-shadow: 0 0 10px rgb(0 0 0 / 10%);
-      background: #fff;
-
-      &-item {
-        padding: 12px 22px;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 100%;
-        letter-spacing: 0.01em;
-        color: #414146;
-
-        &:hover {
-          background-color: rgb(221 219 219);
-        }
-      }
     }
   }
 

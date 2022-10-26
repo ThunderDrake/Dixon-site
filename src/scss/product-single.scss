@@ -1,4 +1,3 @@
-// базовые подключения
 @import "vars";
 @import "mixins";
 @import "fonts";
@@ -8,4 +7,6 @@
 @import "./components/recently";
 @import "./components/product-header";
 @import "./components/breadcrumbs";
-@import "./components/products/catalog";
+@import "./components/product-single/product";
+@import "./components/product-single/characteristic-grid";
+@import "./components/product-single/product-review";

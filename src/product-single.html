@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#111111">
+    <title>Dixon</title>
+    <link rel="preload" href="fonts/circe-light.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-bold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/circe-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-medium.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/product-single.css">
+    <script defer src="js/main.js"></script>
+  </head>
+
+<body class="page__body">
+  <div class="site-container">
+    <div class="visually-hidden">
+      @include('img/symbol/svg/sprite.symbol.svg')
+    </div>
+    @include('partials/header.html')
+    <main class="main" style="padding-top: var(--header-height);">
+      <section class="product">
+        <div class="product__container container">
+          @include('partials/product-single/product-header.html')
+          @include('partials/product-single/product-content.html')
+          @include('partials/product-single/product-tabs.html')
+          @include('partials/product-single/product-recently.html')
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html')
+  </div>
+</body>
+
+</html>

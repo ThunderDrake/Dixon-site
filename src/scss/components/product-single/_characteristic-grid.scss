@@ -1,0 +1,37 @@
+.characteristic-grid {
+  &__group {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &-title {
+      margin-bottom: 10px;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      color: #414146;
+    }
+  }
+
+  &__item {
+    display: grid;
+    column-gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #414146;
+
+    &-title {
+      display: inline-flex;
+      align-items: center;
+      border-bottom: 1px dashed #a4a4a4;
+    }
+
+    @include bp-500 {
+      font-size: 14px;
+    }
+  }
+}

@@ -11,7 +11,9 @@ import { initVacancySelect } from './components/init-vacancy-select';
 import { initQuestionaryForm } from './components/init-questionary-form';
 import { FetchMore, initShowMoreFetch, getParams, updateURL } from './components/init-show-more-fetch';
 import { initPopups, closePopup } from './components/init-popups';
-// import { initFilters } from './components/init-filters';
+import { initProductSlider } from './components/init-product-slider';
+import { initProductTabs } from './components/init-product-tabs';
+import { initTooltips } from './components/init-product-tooltips';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initSubmenuMobile();
   initVacancySelect();
   initQuestionaryForm();
+  initProductSlider();
   const initFilters = () => {
     const filters = document.querySelector('.filter');
 
@@ -215,7 +218,6 @@ window.addEventListener('DOMContentLoaded', () => {
             new FetchMore().init(...selectors));
     };
     initFetchMore();
-    // initFilters();
     initCustomSelect();
     initHeroSlider();
     initTabs();
@@ -223,6 +225,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initPopups();
     initFilters();
     initShowMoreFetch();
+    initProductTabs();
+    initTooltips();
   });
 });
 
