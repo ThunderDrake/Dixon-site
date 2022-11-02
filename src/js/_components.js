@@ -14,6 +14,7 @@ import { initPopups, closePopup } from './components/init-popups';
 import { initProductSlider } from './components/init-product-slider';
 import { initProductTabs } from './components/init-product-tabs';
 import { initTooltips } from './components/init-product-tooltips';
+import { initQuantityInput } from './components/init-quantity-input';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -227,6 +228,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initShowMoreFetch();
     initProductTabs();
     initTooltips();
+    initQuantityInput();
   });
 });
 
