@@ -7,27 +7,30 @@ function initQuantityInput() {
 
   quantityButton.forEach(el => {
     let quantityNumber = el.closest('.quantity').querySelector('.quantity__value');
+    let quantityInput = el.closest('.quantity').querySelector('.quantity__input');
 
+    console.log(quantityInput.value = 5);
     el.addEventListener('click', (e) => {
       if(e.target.classList.contains('quantity__button--plus')) {
-        let quantity = quantityNumber.textContent;
-        quantityPlus(quantityNumber);
+
+        quantityPlus(quantityNumber, quantityInput);
       } else if (e.target.classList.contains('quantity__button--minus')) {
-        let quantity = quantityNumber.textContent;
-        quantityMinus(quantityNumber);
+
+        quantityMinus(quantityNumber, quantityInput);
       }
     });
 
 
   });
 
-  const quantityPlus = (value) => {
+  const quantityPlus = (value, input) => {
     let quantity = value.textContent;
     quantity++;
     value.textContent = quantity;
+    input.value = quantity;
   };
 
-  const quantityMinus = (value) => {
+  const quantityMinus = (value, input) => {
     let quantity = value.textContent;
     quantity--;
     if (quantity<1) {
@@ -35,6 +38,7 @@ function initQuantityInput() {
       return quantity;
     }
     value.textContent = quantity;
+    input.value = quantity;
   };
 }
 

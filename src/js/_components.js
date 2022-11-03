@@ -166,10 +166,10 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     const onPageLoad = () => {
-      const url = window.location.href;
-      if (url.indexOf('?') < 0) {
-        return
-      }
+      // const url = window.location.href;
+      // if (url.indexOf('?') < 0) {
+      //   return
+      // }
       const arrayOfFilters = window.location.href.substring(url.indexOf('?') + 1).split('&');
       arrayOfFilters.forEach((elem) => {
         const filterDataName = elem.substring(0, elem.indexOf('='));
@@ -225,7 +225,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initCertificatesSlider();
     initPopups();
     initFilters();
-    initShowMoreFetch();
+    // initShowMoreFetch();
     initProductTabs();
     initTooltips();
     initQuantityInput();

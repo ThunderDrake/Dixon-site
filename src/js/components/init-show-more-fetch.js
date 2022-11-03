@@ -195,7 +195,7 @@ export class FetchMore {
     const filterParams = this._getParams(isBntReset);
 
     this._updateURL(filterParams);
-
+    console.log(`${url}${filterParams}`);
     if (url) {
       fetch(`${url}${filterParams}`, {method: 'get'})
         .then((response) => response.text())
