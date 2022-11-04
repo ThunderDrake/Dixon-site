@@ -140,6 +140,7 @@
 
   &__cart {
     position: relative;
+    z-index: 5;
     margin-left: 40px;
 
     &-link {
@@ -177,6 +178,7 @@
 }
 
 .menu--active {
+  z-index: 10;
   display: flex;
 }
 

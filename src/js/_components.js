@@ -16,6 +16,7 @@ import { initProductTabs } from './components/init-product-tabs';
 import { initTooltips } from './components/init-product-tooltips';
 import { initQuantityInput } from './components/init-quantity-input';
 import { initShippingActivity } from './components/init-shipping-method-activity';
+import { initCartModal } from './components/init-cart-modal';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -28,6 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initQuestionaryForm();
   initProductSlider();
   initShippingActivity();
+  initCartModal();
   const initFilters = () => {
     const filters = document.querySelector('.filter');
 
