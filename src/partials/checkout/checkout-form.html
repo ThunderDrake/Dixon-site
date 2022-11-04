@@ -1,0 +1,86 @@
+<div class="checkout__form-wrapper">
+
+  <div class="checkout-form__group">
+    <div class="checkout-form__group-title"><span class="checkout-form__group-title-number">1</span>Ваши данные</div>
+    <label class="checkout-form__label" for="checkout-first-name">
+      <span class="checkout-form__input-title">Имя*</span>
+      <input class="checkout-form__input checkout-form__input--short" type="text" placeholder="Иван">
+    </label>
+    <label class="checkout-form__label" for="checkout-second-name">
+      <span class="checkout-form__input-title">Фамилия*</span>
+      <input class="checkout-form__input checkout-form__input--short" type="text" placeholder="Иванов">
+    </label>
+    <label class="checkout-form__label" for="checkout-phone">
+      <span class="checkout-form__input-title">Телефон*</span>
+      <input class="checkout-form__input checkout-form__input--short" type="tel" placeholder="+7 (999) 999-99-99">
+    </label>
+  </div>
+  <div class="checkout-form__group">
+    <div class="checkout-form__group-title"><span class="checkout-form__group-title-number">2</span>Ваш заказ</div>
+    <div class="checkout-form__cart-item">
+      <img loading="lazy" src="img/cart/cart-grid__image.jpg" class="checkout-form__cart-image" width="75" height="90" alt="">
+      <div class="checkout-form__cart-title">Смартфон Samsung Galaxy A23 4/64GB KZ персиковый</div>
+      <div class="checkout-form__cart-quantity">1 шт</div>
+      <div class="checkout-form__cart-price">15 000 Р.</div>
+    </div>
+  </div>
+  <div class="checkout-form__group">
+    <div class="checkout-form__group-title"><span class="checkout-form__group-title-number">3</span>Способ оплаты</div>
+    <label class="custom-checkbox checkout-form__radio">
+      <input type="radio" class="custom-checkbox__field" name="payment-method">
+      <span class="custom-checkbox__content">Оплата картой</span>
+    </label>
+    <label class="custom-checkbox checkout-form__radio">
+      <input type="radio" class="custom-checkbox__field" name="payment-method">
+      <span class="custom-checkbox__content">Наличными при получении</span>
+    </label>
+    <label class="custom-checkbox checkout-form__radio">
+      <input type="radio" class="custom-checkbox__field" name="payment-method">
+      <span class="custom-checkbox__content">Кредит</span>
+    </label>
+  </div>
+  <div class="checkout-form__group">
+    <div class="checkout-form__group-title"><span class="checkout-form__group-title-number">4</span>Способ получения</div>
+    <div class="checkout-form__shipping-wrapper">
+      <label class="custom-checkbox checkout-form__radio">
+        <input type="radio" class="custom-checkbox__field" name="shipping-method" data-shipping="pochta">
+        <span class="custom-checkbox__content">Почта России (1 класс)</span>
+      </label>
+      <div class="checkout-form__shipping-popup">
+        <img loading="lazy" src="img/cart/delivery-pochta.svg" class="checkout-form__shipping-logo" width="200" height="auto" alt="Доставка Почтой России">
+        <div class="checkout-form__shipping-info">
+          <div class="checkout-form__shipping-price">от 236 Р</div>
+          <div class="checkout-form__shipping-text">Дата доставки</div>
+          <div class="checkout-form__shipping-date">14.08.2022</div>
+        </div>
+      </div>
+    </div>
+    <div class="checkout-form__shipping-wrapper">
+      <label class="custom-checkbox checkout-form__radio">
+        <input type="radio" class="custom-checkbox__field" name="shipping-method" data-shipping="cdek">
+        <span class="custom-checkbox__content">СДЭК (Пункт выдачи)</span>
+      </label>
+      <div class="checkout-form__shipping-popup">
+        <img loading="lazy" src="img/cart/delivery-cdek.svg" class="checkout-form__shipping-logo" width="200" height="auto" alt="Доставка Почтой России">
+        <div class="checkout-form__shipping-info">
+          <div class="checkout-form__shipping-price">от 236 Р</div>
+          <div class="checkout-form__shipping-text">Дата доставки</div>
+          <div class="checkout-form__shipping-date">14.08.2022</div>
+        </div>
+      </div>
+    </div>
+    <label class="checkout-form__label" for="checkout-region">
+      <span class="checkout-form__input-title">Регион/область*</span>
+      <input class="checkout-form__input" type="text">
+    </label>
+    <label class="checkout-form__label" for="checkout-city">
+      <span class="checkout-form__input-title">Город/район*</span>
+      <input class="checkout-form__input" type="text">
+    </label>
+    <label class="checkout-form__label" for="checkout-address">
+      <span class="checkout-form__input-title">Адрес*</span>
+      <input class="checkout-form__input" type="text">
+    </label>
+  </div>
+
+</div>

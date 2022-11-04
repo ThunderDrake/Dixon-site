@@ -1,0 +1,252 @@
+.checkout-form {
+  &__group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 62px;
+
+    &-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 35px;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.01em;
+      color: #414146;
+
+      &-number {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        box-shadow: 0 0 2px 0.3px #3743f9 inset;
+
+        @include bp-500 {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      @include bp-500 {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  &__input-title {
+    padding-left: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #a4a4a4;
+
+    @include bp-500 {
+      font-size: 16px;
+    }
+  }
+
+  &__input {
+    border: 1px solid #a4a4a4;
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    color: rgb(164 164 164);
+    background: #fff;
+
+    &::placeholder {
+      color: rgb(164 164 164 / 40%);
+    }
+
+    &--short {
+      width: 60%;
+
+      @include bp-500 {
+        width: 100%;
+      }
+    }
+
+    @include bp-500 {
+      padding: 15px 30px;
+      font-size: 16px;
+    }
+  }
+
+  &__cart-item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cart-image {
+    margin-right: 24px;
+    width: 75px;
+  }
+
+  &__cart-title {
+    margin-right: auto;
+    margin-left: 0;
+    max-width: 260px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    color: #414146;
+
+    @include bp-500 {
+      max-width: 40%;
+      font-size: 14px;
+    }
+  }
+
+  &__cart-quantity {
+    margin: 0 auto;
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: 0.01em;
+    color: #414146;
+  }
+
+  &__cart-price {
+    margin-right: 0;
+    margin-left: auto;
+    font-weight: 800;
+    font-size: 24px;
+    letter-spacing: 0.01em;
+    color: #3a4097;
+
+    @include bp-500 {
+      font-size: 18px;
+    }
+  }
+
+  &__radio {
+    display: block;
+    margin-bottom: 40px;
+    border: 1px solid #a4a4a4;
+    border-radius: 15px;
+    padding: 20px 90px;
+    width: 100%;
+    box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+
+    .custom-checkbox__content {
+      padding-left: 0;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      color: #a4a4a4;
+    }
+
+    .custom-checkbox__content::before {
+      left: 5%;
+      border: 1px solid #a4a4a4;
+      border-radius: 15px;
+      box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+    }
+
+    .custom-checkbox__content::after {
+      left: 5%;
+      border-radius: 50%;
+      background-image: none;
+      background-color: #3743f9;
+    }
+
+    @include bp-500 {
+      padding: 15px 40px;
+    }
+  }
+
+  &__shipping {
+    &-wrapper {
+      position: relative;
+    }
+
+    &-popup {
+      position: absolute;
+      right: 0;
+      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      padding: 40px 30px;
+      width: 100%;
+      max-width: 405px;
+      box-shadow:
+        0 0 15px rgb(196 196 196 / 25%),
+        0 0 0.1px 0.3px #3743f9 inset;
+      background: #eef0ff;
+      opacity: 0;
+      transform: translateX(120%);
+
+      &.active {
+        opacity: 1;
+
+        @include bp-1024 {
+          overflow: visible;
+          margin-top: -10px;
+          margin-bottom: 20px;
+          padding: 30px 25px;
+          max-height: none;
+        }
+      }
+
+      @include bp-1024 {
+        position: static;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 0;
+        padding: 0;
+        width: auto;
+        max-width: none;
+        max-height: 0;
+        box-sizing: content-box;
+        transform: translateX(0);
+      }
+    }
+
+    &-logo {
+      @include bp-415 {
+        width: 130px;
+      }
+    }
+
+    &-info {
+      text-align: right;
+    }
+
+    &-price {
+      margin-bottom: 10px;
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: 0.01em;
+      color: #3a4097;
+    }
+
+    &-text {
+      margin-bottom: 5px;
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.01em;
+      color: #414146;
+    }
+
+    &-date {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+      color: #ff512a;
+    }
+  }
+}
