@@ -3,6 +3,8 @@
 }
 
 .vacancy__list {
+  margin-bottom: 60px;
+
   &-title {
     margin-bottom: 1.3em;
     font-weight: 400;
@@ -17,8 +19,6 @@
 }
 
 .vacancy__content {
-  margin-bottom: 60px;
-
   .choices {
     max-width: 60%;
 

@@ -9,7 +9,6 @@ function initQuantityInput() {
     let quantityNumber = el.closest('.quantity').querySelector('.quantity__value');
     let quantityInput = el.closest('.quantity').querySelector('.quantity__input');
 
-    console.log(quantityInput.value = 5);
     el.addEventListener('click', (e) => {
       if(e.target.classList.contains('quantity__button--plus')) {
 

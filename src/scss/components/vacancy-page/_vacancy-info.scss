@@ -1,4 +1,6 @@
 .vacancy__info {
+  display: none;
+
   &-title {
     margin-bottom: 0.8em;
     font-weight: 700;
@@ -79,6 +81,10 @@
     &--whatsapp {
       color: #39aa26;
     }
+  }
+
+  &.active {
+    display: block;
   }
 }
 
