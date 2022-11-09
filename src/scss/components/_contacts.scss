@@ -126,6 +126,12 @@
     letter-spacing: 0.01em;
     color: #505050;
 
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
     @include bp-800 {
       font-size: 18px;
     }
