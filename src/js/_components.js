@@ -18,6 +18,7 @@ import { initQuantityInput } from './components/init-quantity-input';
 import { initShippingActivity } from './components/init-shipping-method-activity';
 import { initCartModal } from './components/init-cart-modal';
 import { initPricelistTabs } from './components/init-pricelist-tabs';
+import { initReviewsSlider } from './components/init-reviews-slider';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -235,6 +236,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initTooltips();
     initQuantityInput();
     initPricelistTabs();
+    initReviewsSlider();
   });
 });
 

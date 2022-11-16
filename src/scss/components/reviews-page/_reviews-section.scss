@@ -1,0 +1,81 @@
+.reviews {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  &__title {
+    margin-bottom: 1.45em;
+    text-align: center;
+  }
+
+  &__item {
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #232323;
+    background: #eef0ff;
+
+    &-wrapper {
+      padding: 20px;
+    }
+
+    &-title {
+      margin-bottom: 14px;
+      font-weight: 700;
+      font-size: 20px;
+      letter-spacing: 0.01em;
+      color: #3a4097;
+    }
+
+    &-rating {
+      position: relative;
+      display: flex;
+      margin-bottom: 14px;
+      width: 100px;
+      height: 20px;
+      background: url("../img/rating-icon.svg") 0 0 repeat-x;
+    }
+
+    &-rating::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: var(--rating-width);
+      height: 100%;
+      background: url("../img/rating-icon-full.svg") 0 0 repeat-x;
+    }
+
+    &-text {
+      margin: 0;
+    }
+  }
+
+  &__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+    --swiper-pagination-bullet-width: 14px;
+    --swiper-pagination-bullet-height: 14px;
+    --swiper-pagination-color: #3a4097;
+    --swiper-pagination-bullet-inactive-color: transparent;
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 10px;
+
+    bottom: -10px;
+
+    .swiper-pagination-bullet {
+      border: 1px solid #3a4097;
+    }
+
+    @include bp-500 {
+      --swiper-pagination-bullet-width: 10px;
+      --swiper-pagination-bullet-height: 10px;
+
+      bottom: 0;
+    }
+  }
+
+  @include bp-500 {
+    padding-top: 40px;
+  }
+}
