@@ -23,7 +23,6 @@
   width: auto;
   box-shadow: none;
   // box-shadow: 0px 36px 90px rgba(13, 8, 65, 0.08);
-  border-radius: 0 0 20px 20px;
 
   transition: box-shadow $trans-default,
   background-color $trans-default,
@@ -87,6 +86,7 @@
   }
 
   .submenu__item {
+    padding: 10px;
     margin-bottom: 10px;
     display: flex;
     align-items: center;

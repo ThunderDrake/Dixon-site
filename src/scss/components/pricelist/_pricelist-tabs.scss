@@ -1,0 +1,259 @@
+.pricelist {
+  padding-top: 100px;
+
+  &__grid {
+    display: grid;
+    column-gap: 60px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 40px;
+    row-gap: 20px;
+
+    @include bp-1024 {
+      column-gap: 30px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include bp-800 {
+      column-gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp-415 {
+      column-gap: 0;
+      grid-template-columns: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #a4a4a4;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    color: #a4a4a4;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+
+    &--active {
+      border: 1px solid #3a4097;
+      font-weight: 700;
+      color: #202464;
+    }
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__show-more {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    letter-spacing: 0.02em;
+    color: #202464;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 10px;
+      height: 12px;
+      background-image: url("data:image/svg+xml,%3Csvg width='12' height='6' viewBox='0 0 12 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.00164462 0.851445C0.00125661 0.652853 0.0704211 0.460393 0.197133 0.307477C0.268485 0.221413 0.356116 0.150271 0.455005 0.0981246C0.553895 0.0459785 0.662098 0.0138536 0.773422 0.0035897C0.884745 -0.00667418 0.997 0.00512483 1.10376 0.0383107C1.21051 0.0714965 1.30967 0.125416 1.39556 0.196984L5.95129 4.00476L10.5155 0.332976C10.6025 0.262375 10.7025 0.209651 10.8099 0.177836C10.9173 0.146021 11.0299 0.135741 11.1412 0.147589C11.2526 0.159437 11.3605 0.193177 11.4588 0.246871C11.5571 0.300566 11.6438 0.373156 11.7139 0.460468C11.7913 0.548409 11.8497 0.651394 11.8854 0.76296C11.9211 0.874526 11.9333 0.992266 11.9213 1.10879C11.9094 1.22531 11.8734 1.3381 11.8158 1.44008C11.7582 1.54206 11.6801 1.63102 11.5864 1.70139L6.48676 5.80665C6.33467 5.93166 6.14391 6 5.94704 6C5.75017 6 5.5594 5.93166 5.40732 5.80665L0.307627 1.5569C0.204768 1.47164 0.123459 1.36333 0.0702954 1.24075C0.0171322 1.11818 -0.00638789 0.984807 0.00164462 0.851445Z' fill='%23202464'/%3E%3C/svg%3E%0A");
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(-200%, -50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      width: 100%;
+      height: 1px;
+      background-color: #3a4097;
+    }
+  }
+
+  &__works-list {
+    margin-bottom: 50px;
+  }
+
+  &__button {
+    margin: 0 auto;
+    padding-top: 26px;
+    padding-bottom: 25px;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  @include bp-1024 {
+    padding-top: 80px;
+  }
+
+  @include bp-600 {
+    padding-top: 60px;
+  }
+
+  @include bp-415 {
+    padding-top: 50px;
+  }
+}
+
+.pricelist__tabs {
+  .tabs__nav {
+    display: flex;
+    margin-right: -15px;
+    margin-bottom: 30px;
+    margin-left: -15px;
+
+    &-item {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+
+    &-btn {
+      position: relative;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      color: #50537d;
+      transition: all 0.3s ease-in;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+        width: 100%;
+        height: 1px;
+        background-color: #3a4097;
+        opacity: 0;
+      }
+
+      &--active {
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: 0.01em;
+        color: #202464;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.work-list {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(6, 160px);
+  row-gap: 2em;
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    height: 160px;
+    box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+    background: #f5f6ff;
+    cursor: pointer;
+
+    &:hover {
+      .work-list__price {
+        opacity: 1;
+      }
+
+      .work-list__title {
+        color: #fff;
+      }
+    }
+
+    @include bp-500 {
+      height: 120px;
+    }
+  }
+
+  &__icon {
+    @include bp-500 {
+      margin-top: -40px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    bottom: 20px;
+    z-index: 1;
+    margin: 0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    color: #414146;
+    transition: color 0.3s ease-in;
+  }
+
+  &__price {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+    font-weight: 700;
+    font-size: 32px;
+    color: #fff;
+    background: #3743f9;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+  }
+
+  @include bp-1200 {
+    grid-template-columns: repeat(5, 160px);
+  }
+
+  @include bp-800 {
+    grid-template-columns: repeat(4, 160px);
+  }
+
+  @include bp-700 {
+    grid-template-columns: repeat(3, 160px);
+  }
+
+  @include bp-500 {
+    grid-template-columns: repeat(3, 120px);
+  }
+
+  @include bp-425 {
+    column-gap: 2em;
+    justify-content: center;
+    grid-template-columns: repeat(2, 120px);
+  }
+}
