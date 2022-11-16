@@ -19,6 +19,7 @@ import { initShippingActivity } from './components/init-shipping-method-activity
 import { initCartModal } from './components/init-cart-modal';
 import { initPricelistTabs } from './components/init-pricelist-tabs';
 import { initReviewsSlider } from './components/init-reviews-slider';
+import { initStatusForm } from './components/init-status-form';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -237,6 +238,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initQuantityInput();
     initPricelistTabs();
     initReviewsSlider();
+    initStatusForm();
   });
 });
 

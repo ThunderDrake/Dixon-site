@@ -1,0 +1,70 @@
+.status-page {
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+    color: #232323;
+
+    span {
+      font-weight: 700;
+    }
+  }
+
+  &__form {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 30px;
+    padding: 40px 40px 60px;
+    background: #f5f6ff;
+
+    @include bp-800 {
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, 1fr);
+      row-gap: 20px;
+    }
+  }
+
+  &__input {
+    border: none;
+    border-radius: 15px;
+    padding: 0 40px;
+    width: 100%;
+    box-shadow: 0 0 20px 5px rgb(234 234 234 / 5%);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 170%;
+    letter-spacing: 0.01em;
+    color: rgb(172 172 172 / 100%);
+    background: #fff;
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 170%;
+      letter-spacing: 0.01em;
+      color: rgb(172 172 172 / 40%);
+    }
+  }
+
+  &__form-button {
+    @include bp-600 {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+  }
+
+  @include bp-600 {
+    padding-top: 40px;
+    padding-bottom: 0;
+  }
+}
