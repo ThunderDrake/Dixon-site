@@ -20,6 +20,7 @@ import { initCartModal } from './components/init-cart-modal';
 import { initPricelistTabs } from './components/init-pricelist-tabs';
 import { initReviewsSlider } from './components/init-reviews-slider';
 import { initStatusForm } from './components/init-status-form';
+import { initRepairForm } from './components/init-repair-form';
 import { burger } from './functions/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -239,6 +240,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPricelistTabs();
     initReviewsSlider();
     initStatusForm();
+    initRepairForm();
   });
 });
 

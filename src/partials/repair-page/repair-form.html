@@ -1,0 +1,172 @@
+<section class="repair">
+  <div class="repair__container container">
+    <div class="repair__title-container">
+      <h1 class="repair__title h2-title">Рассчитать точную стоимость ремонта</h1>
+      <div class="repair__title-label">всего за 4 шага</div>
+    </div>
+    <form class="repair__form">
+      <div class="repair__form-counter">
+        <span class="repair__form-counter-text">Шаг 1 из 4</span>
+        <div class="repair__form-counter-bar">
+          <div class="repair__form-counter-bar--active"></div>
+        </div>
+      </div>
+      <div class="repair__form-steps">
+        <div class="repair__form-step repair__form-step--active">
+          <div class="repair__input">
+            <label class="repair__input-label">
+              <span class="repair__input-text">Какая у Вас модель устройства?</span>
+              <input type="text" class="repair__input-input">
+            </label>
+          </div>
+          <a class="repair__form-next-step btn btn--main btn-reset" href="#">Следующий вопрос</a>
+        </div>
+
+        <div class="repair__form-step">
+          <div class="repair__problem-list work-list">
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-1.svg')
+                </div>
+                <h3 class="work-list__title">Разбито стекло</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-2.svg')
+                </div>
+                <h3 class="work-list__title">Не заряжается</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-3.svg')
+                </div>
+                <h3 class="work-list__title">Не работает Wi-Fi</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-4.svg')
+                </div>
+                <h3 class="work-list__title">Не работает звук</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-5.svg')
+                </div>
+                <h3 class="work-list__title">Не ловит сеть</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-6.svg')
+                </div>
+                <h3 class="work-list__title">Не работает микрофон</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-7.svg')
+                </div>
+                <h3 class="work-list__title">Разбита камера</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-8.svg')
+                </div>
+                <h3 class="work-list__title">Быстро разряжается</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-9.svg')
+                </div>
+                <h3 class="work-list__title">Попала влага</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-10.svg')
+                </div>
+                <h3 class="work-list__title">Не включается</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-11.svg')
+                </div>
+                <h3 class="work-list__title">Не работает Bluetooth</h3>
+              </div>
+            </label>
+            <label class="repair__problem-checkbox custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__field">
+              <div class="work-list__item">
+                <div class="work-list__icon">
+                  @include('../../img/repair/work-12.svg')
+                </div>
+                <h3 class="work-list__title">Другая неисправность</h3>
+              </div>
+            </label>
+          </div>
+          <a class="repair__form-next-step btn btn--main btn-reset" href="#">Следующий вопрос</a>
+        </div>
+
+        <div class="repair__form-step">
+          <div class="repair__input">
+            <label class="repair__input-label">
+              <span class="repair__input-text">Укажи SN или IMEI устройства</span>
+              <input type="text" class="repair__input-input">
+            </label>
+          </div>
+          <a class="repair__form-next-step btn btn--main btn-reset" href="#">Следующий вопрос</a>
+        </div>
+
+        <div class="repair__form-step">
+          <div class="repair__sup-title">Оставьте свои данные и наш менеджер свяжется с вами в течении 15 минут.</div>
+          <label class="repair__form-field repair__form-field--name" for="form_name">
+            <svg class="repair__form-field-icon" width="26" height="26">
+              <use xlink:href="img/sprite.svg#name-input-icon"></use>
+            </svg>
+            <input class="repair__form-field-input" type="text" name="form_name" placeholder="Введите ваше имя">
+          </label>
+          <label class="repair__form-field repair__form-field--name" for="form_phone">
+            <svg class="repair__form-field-icon" width="26" height="26">
+              <use xlink:href="img/sprite.svg#phone-input-icon"></use>
+            </svg>
+            <input class="repair__form-field-input" type="text" name="form_phone" placeholder="Введите ваш телефон">
+          </label>
+          <button type="submit" class="btn btn-reset btn--main repair__form-submit">Оставить заявку</button>
+          <label class="repair__form-policy custom-checkbox">
+            <input type="checkbox" class="custom-checkbox__field">
+            <span class="custom-checkbox__content">Согласен на обработку <a href="#">персональных данных</a></span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
