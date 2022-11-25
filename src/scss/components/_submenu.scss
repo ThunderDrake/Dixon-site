@@ -1,6 +1,10 @@
 @import "../vars";
 
 .submenu {
+  transform: translateY(-25px);
+  @media (max-width: 1024px) {
+    transform: translateY(0);
+  }
   &.header__submenu-search {
     top: 0;
     border-top: none;
@@ -59,8 +63,8 @@
 
   .container {
     padding: 0;
-    padding-left: 25px;
-    padding-right: 25px;
+    // padding-left: 25px;
+    // padding-right: 25px;
 
     @include vp-1023 {
       padding: 0;
@@ -87,9 +91,22 @@
 
   .submenu__item {
     padding: 10px;
-    margin-bottom: 10px;
     display: flex;
     align-items: center;
+    margin-bottom: 0;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #3a4097;
+    color: #fff;
+    transition: background-color 0.3s ease-in;
+
+    &:hover {
+      background-color: #fff;
+
+      .submenu__link {
+        color: #3a4097;
+      }
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -100,7 +117,8 @@
 .submenu__link {
   display: flex;
   align-items: center;
-  color: $color-default-black;
+  color: #fff;
+  transition: color 0.3s ease-in;
 
   &.is-active {
     width: min-content;
